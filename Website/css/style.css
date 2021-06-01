@@ -187,3 +187,24 @@ body {
 .img{
   width = 120%;
 }
+
+/*.col-sm-4{
+  color: blue;
+}
+*/
+.Search{ /* search doesnt work*/
+  background-color: #e6e6e6;
+  height: 150px;
+}
+
+.below{
+  background-color: #fbfbfb;
+  height: 100px;
+}
+
+/*#searching{
+  color: #000000;
+  font-size: 28px;
+}*/
+
+/*When we use div.row , .class1 .class2 and > */
