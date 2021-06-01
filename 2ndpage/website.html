@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<style>
+    
+
+    
+    .checked {
+        color: orange;
+      }
+ 
+    .a {
+         margin-top: 200px;
+         margin-left: 50px;
+         margin-right: 100px;
+         height: 250px;
+         border-radius: 20px;
+         background-color: rgb(221, 226, 225);
+         background-image: url("hotel-r-de-paris.jpg");
+         background-repeat: no-repeat;
+         background-position-x: left;
+         background-size: contain;
+        }
+        .b {
+         margin-top: 200px;
+         margin-left: 50px;
+         margin-right: 100px;
+         height: 250px;
+         border-radius: 20px;
+         background-color: rgb(221, 226, 225);
+         background-image: url("pool-for-google-blog.jpg");
+         background-repeat: no-repeat;
+         background-position-x: left;
+         background-size: contain;
+        }
+  
+        .c {
+         margin-top: 200px;
+         margin-left: 50px;
+         margin-right: 100px;
+         height: 250px;
+         border-radius: 20px;
+         background-color: rgb(221, 226, 225);
+         background-image: url("Listing_Image_skazsy.jpg");
+         background-repeat: no-repeat;
+         background-position-x: left;
+         background-size: contain;
+        }
+  
+        .d {
+         margin-top: 200px;
+         margin-left: 50px;
+         margin-right: 100px;
+         height: 250px;
+         border-radius: 20px;
+         background-color: rgb(221, 226, 225);
+         background-image: url("hotel-r-de-paris.jpg");
+         background-repeat: no-repeat;
+         background-position-x: left;
+         background-size: contain;
+        }
+
+        #a{
+           left: 500px; 
+           position: absolute;
+           padding-right: 100px;
+           color: rgb(8, 8, 8);
+
+        }
+        * {
+  box-sizing: border-box;
+}
+ .ab{
+     position: absolute;
+     top: 280px;
+     left: 500px;
+     border-radius: 10px;
+ }
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  font-family: 'Times New Roman', Times, serif;
+  border-radius: 10px;
+  
+
+}
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+  color: rgb(0, 0, 0);
+}
+.fa {
+  font-size: 25px;
+}
+.checked {
+  color: orange;
+}
+.side {
+  float: left;
+  width: 15%;
+  margin-top:10px;
+  color: rgb(0, 0, 0);
+}
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 70%;
+  color: rgb(0, 0, 0);
+}
+.right {
+  text-align: right;
+  color: rgb(0, 0, 0);
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: rgb(247, 247, 247);
+  overflow: hidden;
+  border-radius: 10px;
+}
+     
+</style>
+</head>
+<body>
+   
+   
+<div class="a">
+    <h2 id="a">Marriot hotel
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star checked"></span>
+    <span class="fa fa-star"></span>
+    </h2>
+ </div>
+ <div class="ab">
+ <button class="accordion">Reviews</button>
+<div class="panel">
+  <span class="heading">User Rating</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<p class="heading">4.1 average based on 254 reviews.</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+
+</div>
+
+<button class="accordion">Details</button>
+<div class="panel">
+  <p></p>
+</div>
+
+<button class="accordion">Photos</button>
+<div class="panel">
+  <p></p>
+</div>
+</div>
+
+ <div class="b">
+</div>
+<div class="c">
+</div>
+<div class="d">
+</div>
+
+
+  
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+
+     
+
+   
+    
+         
+    
+    
+</body>
+    
+
+</html>
