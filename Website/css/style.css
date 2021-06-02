@@ -1,7 +1,7 @@
 body {
   font-size: 16px;
   color: #fff;
-  background-color: #f4a460;
+  background-color: #fff; /*f4a460*/
   font-family: 'Oxygen', sans-serif;
 }
 /*bf325a   , eb4c34*/
@@ -27,7 +27,7 @@ body {
   overflow: hidden;
   background-color: rgba(5,5,5,0);
   font-family: Arial;
-  top: 20px;
+  margin-top: 10px;
   right: 20px; /* can we do left , right both */
 }
 
@@ -184,9 +184,9 @@ body {
   padding: 3px;
 }
 
-.img{
+/*.img{
   width = 120%;
-}
+}*/
 
 /*.col-sm-4{
   color: blue;
@@ -197,10 +197,6 @@ body {
   height: 150px;
 }
 
-.below{
-  background-color: #fbfbfb;
-  height: 100px;
-}
 
 /*#searching{
   color: #000000;
