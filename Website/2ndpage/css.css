@@ -1,0 +1,253 @@
+.checked {
+    color: orange;
+  }
+
+.a {
+     margin-top: 200px;
+     margin-left: 50px;
+     margin-right: 100px;
+     height: 250px;
+     border-radius: 20px;
+     background-color: rgb(221, 226, 225);
+     background-image: url("1-14085_beach-hotel-background-hd.jpg");
+     background-repeat: no-repeat;
+     background-position-x: left;
+     background-size: contain;
+    }
+    .b {
+     margin-top: 200px;
+     margin-left: 50px;
+     margin-right: 100px;
+     height: 250px;
+     border-radius: 20px;
+     background-color: rgb(221, 226, 225);
+     background-image: url("pool-for-google-blog.jpg");
+     background-repeat: no-repeat;
+     background-position-x: left;
+     background-size: contain;
+    }
+
+    .c {
+     margin-top: 200px;
+     margin-left: 50px;
+     margin-right: 100px;
+     height: 250px;
+     border-radius: 20px;
+     background-color: rgb(221, 226, 225);
+     background-image: url("cabo-san-lucas-1920x1080-mexico-resort-hotel-sunset-sunrise-pool-1128.jpg");
+     background-repeat: no-repeat;
+     background-position-x: left;
+     background-size: contain;
+    }
+
+    .d {
+     margin-top: 200px;
+     margin-left: 50px;
+     margin-right: 100px;
+     height: 250px;
+     border-radius: 20px;
+     background-color: rgb(221, 226, 225);
+     background-image: url("background13-1920x1280.jpg");
+     background-repeat: no-repeat;
+     background-position-x: left;
+     background-size: contain;
+     background-size: 450px;
+    }
+
+    #a{
+       left: 550px; 
+       position: absolute;
+       padding-right: 100px;
+       color: rgb(8, 8, 8);
+
+    }
+    * {
+box-sizing: border-box;
+background-color: antiquewhite;
+}
+.ab1{
+ position: absolute;
+ top: 280px;
+ left: 550px;
+ border-radius: 10px;
+}
+.ab2{
+ position: absolute;
+ top: 730px;
+ left: 550px;
+ border-radius: 10px;
+   }
+.ab3{
+ position: absolute;
+ top: 1180px;
+ left: 550px;
+ border-radius: 10px;
+   }
+.ab4{
+ position: absolute;
+ top: 1630px;
+ left: 550px;
+ border-radius: 10px;
+   }
+
+.accordion {
+background-color: #eee;
+color: #444;
+cursor: pointer;
+padding: 18px;
+width: 100%;
+border: none;
+text-align: left;
+outline: none;
+font-size: 15px;
+transition: 0.4s;
+font-family: 'Times New Roman', Times, serif;
+border-radius: 10px;
+
+
+}
+.heading {
+font-size: 25px;
+margin-right: 25px;
+color: rgb(0, 0, 0);
+background-color: white;
+}
+.fa {
+font-size: 25px;
+}
+.checked {
+color: orange;
+}
+.row{
+background-color: white;
+}
+.side {
+float: left;
+width: 15%;
+margin-top:10px;
+color: rgb(0, 0, 0);
+background-color: white;
+}
+.middle {
+margin-top:10px;
+float: left;
+width: 70%;
+color: rgb(0, 0, 0);
+}
+.right {
+text-align: right;
+color: rgb(0, 0, 0);
+}
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+.bar-container {
+width: 100%;
+background-color: #f1f1f1;
+text-align: center;
+color: white;
+}
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+@media (max-width: 400px) {
+.side, .middle {
+width: 100%;
+}
+.right {
+display: none;
+}
+}
+.active, .accordion:hover {
+background-color: #ccc; 
+}
+
+.panel {
+padding: 0 18px;
+display: none;
+background-color: rgb(247, 247, 247);
+overflow: hidden;
+border-radius: 10px;
+}
+.topnav{
+position: absolute;
+top: 10px;  
+}
+
+.topnav a {
+float: left;
+display: block;
+color: black;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+
+
+}
+
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+
+.topnav a.active {
+background-color: #2196F3;
+color: white;
+}
+
+.topnav .login-container {
+float: right;
+margin-left: 950px;
+}
+
+.topnav input[type=text] {
+padding: 6px;
+margin-top: 8px;
+font-size: 17px;
+border: none;
+width:120px;
+}
+
+.topnav .login-container button {
+float: right;
+padding: 6px 10px;
+margin-top: 8px;
+margin-right: 16px;
+background-color: #555;
+color: white;
+font-size: 17px;
+border: none;
+cursor: pointer;
+}
+
+.topnav .login-container button:hover {
+background-color: green;
+}
+
+@media screen and (max-width: 600px) {
+.topnav .login-container {
+float: none;
+}
+.topnav a, .topnav input[type=text], .topnav .login-container button {
+float: none;
+display: block;
+text-align: left;
+width: 100%;
+margin: 0;
+padding: 14px;
+}
+.topnav input[type=text] {
+border: 1px solid #ccc;  
+}
+}
+#a{
+background-color: rgb(221, 226, 225);
+
+}
+ 

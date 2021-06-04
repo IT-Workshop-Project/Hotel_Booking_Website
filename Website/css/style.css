@@ -210,3 +210,8 @@ body {
   font-size: 20px;
   color: blueviolet;
 }
+
+.login-container{
+  text-align: right;
+  margin-right: 50px;
+}
