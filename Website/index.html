@@ -109,15 +109,30 @@
 
     <div style="background-color: #e6e6e6; height: 180px">
     <div class="container">
-        <div class="row">
-          <section id = "searching" class="col-sm-4" style="margin-top: 50px;">
+        <div style="margin-top: 50px;" class="row">
+          <section id = "searching" class="col-sm-4">
             <span style="color: black; font-size: 28px; font-family: cavolini;">SEARCH</span> <br>
             <span style="color: black; font-size: 26px; font-family: vendome regular"> Your </span>
             <span style="color: #f4a460; font-size: 26px; font-family: vendome regular"> Rooms </span>
           </section>
-          <section style="font-size: 25px; color: black;" class="col-sm-4"> <!-- See without class -->
-            <a href= "website2.html"> Book Now </a>  <!-- Add class/id here -->
+          <section style="color: black;" class="col-sm-4"> <!-- See without class -->
+            <form>
+              <input type="date" placeholder="Check-in Date" name="date"> <br> <br>
+              <input type="date" placeholder="Check-out Date" name="date">
+            </form>
           </section>
+          <section style="color: black;" class="col-sm-4">
+            <form>
+              <input type="text" placeholder="Adult" name="date"> <br> <br>
+              <input type="text" placeholder="Children" name="date">
+            </form>
+            <select id="selectNumber">
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
+          </section>
+            <a style="font-size: 20px; text-align: right;" href= "website2.html"> Book Now </a>  <!-- Add class/id here -->
         </div>
       </div>
     </div>
