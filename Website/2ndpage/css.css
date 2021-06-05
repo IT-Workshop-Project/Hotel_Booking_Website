@@ -204,9 +204,11 @@ color: white;
 .topnav .login-container {
 float: right;
 margin-left: 950px;
+
 }
 
 .topnav input[type=text] {
+  
 padding: 6px;
 margin-top: 8px;
 font-size: 17px;
@@ -236,7 +238,7 @@ float: none;
 }
 .topnav a, .topnav input[type=text], .topnav .login-container button {
 float: none;
-display: block;
+display: inline-block;
 text-align: left;
 width: 100%;
 margin: 0;
