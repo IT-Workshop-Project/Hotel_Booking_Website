@@ -18,7 +18,7 @@ ul {
 }
 
 li {
-  float: left;
+  float: right;
 }
 
 li a, .dropbtn {
@@ -73,7 +73,7 @@ li.dropdown {
 	.div5{background-color:#2f3542;border-radius: 10px; }
 	.div6{background-color:#ffa502;border-radius: 10px; }
 	.div7{background-color:#ffffff;
-		grid-column: 1/2;border-radius: 10px; }
+		grid-column: 1/2;border-radius: 10px;  }
   .div8{background-color:#2f3542;
     grid-column: 1/-1;border-radius: 10px;}
   .div9{background-color:#2f3542;
