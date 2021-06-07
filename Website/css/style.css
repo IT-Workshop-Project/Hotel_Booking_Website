@@ -13,7 +13,24 @@ body {
   color: white; 
   font-size: 60px;  /* role of font size in h1*/
   /*color: rgba(5,5,5,0.8);  does this overwrite the previous color*/
+  animation-name: center;
+  animation-timing-function: linear;
 }
+
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
 
 .top-right {
   position: absolute;
