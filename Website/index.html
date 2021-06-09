@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css\style.css">
     
     <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
-  <body>
+  <body style="color:black;">
 
     <div class="navbar">
       <a href="#home">Home</a>
@@ -80,11 +80,11 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <img src="images/pic.png">
+          <img src="images/pic3.png">
         </div>
 
         <div class="item">
-          <img src="images/pic3.png" alt="Chicago">
+          <img src="images/pic.png" alt="Chicago">
         </div>
 
         <div style="height: 665px;" class="item">
@@ -154,7 +154,7 @@
 
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-
+    
 
     <div class= "container">
       <div class=" row">
@@ -191,8 +191,13 @@
         </div>
       </div>
     </div>
+
+
+
+
+    
     <footer class="panel-footer">
-      <div class="container">
+      <div class="container" style=" color: white;">
         <div class="row">
           <section id="hours" class="col-sm-4">
             <span>Contact Us </span><br>
@@ -221,17 +226,42 @@
         </div>
       </div>
     </footer>
-    <footer class="bottom">
+    <footer class="bottom" style="color: white;">
       <!-- <div style="top:30px;"> &copy; Copyright IT Workshop Project</div>,      <p> not working here -->
       <div class="Copyright"> &copy; Copyright IT Workshop Project</div> <!-- <p> not working here , use id here-->
       <p> All rights reserved</p>
     </footer>
 
-    <div style="background-color: #f4a460; height: 40px;" class="topbar">
-      <div class="login-container">  <!-- Properties of topbar will affect this?- No -->
+
+    <div style="background-color: #f4a460; height: 50px;" class="topbar">
+
+    <!-- <p style="color: white;"> Need Support?  info@project.com</p> -->
+    <button onclick="document.getElementById('id01').style.display='block'" style ="width: auto; float: right;margin-right: 20px;">Sign Up</button>
+    <button style ="width: auto; float: right; margin-right: 20px;"> Login</button>
+ <!--    <div class="login-container">  Properties of topbar will affect this?- No
         <a href=" login.html">Login</a>
+      </div> -->
+      <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content animate" action=" ">
+          <div class="container">
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+            <div class="clearfix">
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+              <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
+
 
     <i class="fa fa-envelope" aria-hidden="true"></i>
     <i class="fas fa-cloud"></i>
