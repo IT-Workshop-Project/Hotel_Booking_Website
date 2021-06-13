@@ -88,6 +88,32 @@
 			width: 100%;
 		}
 	}
+
+
+
+	.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 8px;
+  background: #04AA6D;
+  width: 0%;
+}
+
+
 </style>
 <body>
 	<h2>Modal Signup Form</h2>
@@ -111,22 +137,8 @@
 			</div>
 		</form>
 	</div>
-	<script>
-		var modal = document.getElementById('id01');
-
-		window.onclick = function(event) {
-			if (event.target == modal) {
-				modal.style.display = "none";
-			}
-		}
-	</script>
-</body>
-</html>
-
-
-
-
-<div class="row">
+	
+<!-- <div class="row">
   <div class="side">5 star</div>
   <div class="middle">
     <div class="bar-container">
@@ -164,3 +176,38 @@
   <div class="side right">20</div>
 </div>
 </div>
+
+ -->
+
+<div class="header" >
+  <h2>Scroll Indicator</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+</div>
+
+<div>content...</div>
+
+<script>
+		var modal = document.getElementById('id01');
+
+		window.onclick = function(event) {
+			if (event.target == modal) {
+				modal.style.display = "none";
+			}
+		}
+	</script>
+
+	<script>
+		window.onscroll = function() {myFunction()};
+
+		function myFunction() {
+		  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+		  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+		  var scrolled = (winScroll / height) * 100;
+		  document.getElementById("myBar").style.width = scrolled + "%";
+		}
+	</script>
+
+</body>
+</html>

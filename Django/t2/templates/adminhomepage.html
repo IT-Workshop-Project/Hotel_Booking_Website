@@ -1,0 +1,23 @@
+Hi Aditya
+<a class =' btn btn-danger' href='/logoutuser/'>Logout</a>
+<form method="POST" action="/add/">
+    {% csrf_token %}
+    <input type="text" class="form-control" name="pizza">
+    <input type="text" class="form-control" name="price">
+    <input type="submit" value="add" name="" class='btn btn-success'>
+</form>
+
+<table style="width: 50%">
+    <tr>
+        <th>Hotel Name</th>
+        <th>Price</th>
+        <th>Delete</th>
+    </tr>
+    {% for hotel in hotels %}
+    <tr>
+        <td>{{hotel.name}}</td>
+        <td>{{hotel.price}}</td>
+        <td><a href="/delete/{{hotel.id}}/" class="btn btn-danger">Delete</a></td> <!-- diff bw href="" and href="#" and why delete/...doenst work  -->
+    </tr>
+    {% endfor %}
+</table>
