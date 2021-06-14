@@ -56,8 +56,12 @@
         </div>
       </div>
     </div></div>
+    {% for hotel in hotels %}
+
 <!----------------------------------------------------------------------->
-  <form method="POST" action="/book/">
+  <form method="POST" action="/book/{{hotel.id}}/">
+    {% endfor %}
+
     {% csrf_token %}
     <!-- <table>
         <tr>
@@ -74,7 +78,7 @@
     </table> -->
     <input type='submit' value="Book Now">
   </form>
-  {% for hotel in hotels %}
+  <!-- {% for hotel in hotels %} -->
 	<div class="div3" style="text-align: left;">
     <p style="font-size: 1.85em">{{hotel.name}}
       <span class="fa fa-star checked"></span>

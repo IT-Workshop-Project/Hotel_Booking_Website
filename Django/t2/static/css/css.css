@@ -9,7 +9,7 @@
      height: 250px;
      border-radius: 20px;
      background-color: rgb(221, 226, 225);
-     background-image: url("{% static 'images/1-14085_beach-hotel-background-hd.jpg' %}");
+     background-image: url("../images/1-14085_beach-hotel-background-hd.jpg");
      background-repeat: no-repeat;
      background-position-x: left;
      background-size: contain;

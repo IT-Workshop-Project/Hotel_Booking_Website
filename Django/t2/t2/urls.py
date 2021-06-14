@@ -14,10 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.contrib.auth import authenticate
+# from django.contrib.auth import authenticate
 from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
 
-from Home.views import add, adminhomepage, adminloginview, authenticateadmin, book, customerwelcome, delete, homePage, logoutuser, page2, page3, page4, price, redirecthomePage, signupuser, specifichotel, userauthenticate, userbooking, userlogin, usersignup 
+from Home.views import add, adminhomepage, adminloginview, authenticateadmin, book, customerwelcome, delete, display_hotel_images, homePage, hotel_image_view, logoutuser, page2, page3, page4, price, redirecthomePage, signupuser, specifichotel, success, userauthenticate, userbooking, userlogin, usersignup 
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -39,8 +41,13 @@ urlpatterns = [
     path('customerwelcome/',customerwelcome),
     # path('userlogout/',redirecthomePage),
     path('logoutuser/',logoutuser),
-    path('book/',book),
+    path('book/<int:hotelp>/',book),
     path('userbookings/',userbooking),
-    path('hotels/<int:hotelp>/',specifichotel)
+    path('hotels/<int:hotelp>/',specifichotel),
 
-]
+    path('image_upload/', hotel_image_view, name = 'image_upload'),
+    path('success', success, name = 'success'),
+    path('hotel_images/', display_hotel_images, name = 'hotel_images')
+
+
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
