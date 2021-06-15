@@ -1,0 +1,250 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+	<link rel ="stylesheet" type="text/css" href="{% static 'css\good.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel ="stylesheet" type="text/css" href="{% static 'css/good.css' %}">
+
+</head>
+<body>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<main>
+
+<!-- DROPDOWN-->
+	<!--<div class="div1">-->
+		<ul>
+  <li ><a href="#home">NEWS</a></li>
+  <li ><a href="/home/">HOME</a></li>
+  <li class="dropdown" >
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul></div>
+<!--------------------------------------->
+		
+		
+	<div class="div2"><div class="container">
+        <div style="margin-top: 50px;" class="row">
+          <section id = "searching" class="col-sm-4">
+            <span style="color: black; font-size: 28px; font-family: cavolini;">SEARCH</span> <br>
+            <span style="color: black; font-size: 26px; font-family: vendome regular"> Your </span>
+            <span style="color: #f4a460; font-size: 26px; font-family: vendome regular"> Rooms </span>
+          </section>
+          <section style="color: black;" class="col-sm-4"> <!-- See without class -->
+            <form>
+              <input type ="date" placeholder ="Check-in Date" name ="date"> <br> <br>
+              <input type ="date" placeholder ="Check-out Date" name ="date">
+            </form>
+          </section>
+          <section style ="color: black;" class ="col-sm-4"> <!-- or col-sm-6 -->
+            <form>
+              <input type ="number" placeholder="Adult" min = '1' name ="Adult"> <br> <br>
+              <input type ="number" placeholder="Children" min ='0' name ="Children">
+            </form>
+
+            <a style="font-size: 15px; text-align: right;" href= "/hotels/"><button> Update</button> </a>  <!-- Add class/id here -->
+        </div>
+      </div>
+    </div></div>
+    {% for hotel in hotels %}
+
+<!----------------------------------------------------------------------->
+  <form method="POST" action="/book/{{hotel.id}}/">
+    {% endfor %}
+
+    {% csrf_token %}
+    <!-- <table>
+        <tr>
+            <th>Hotel</th>
+            <th>Price</th>
+        </tr>
+        {% for hotel in hotels %}
+        <tr>
+            <td>{{hotel.name}}</td>
+            <td>{{hotel.price}}</td>
+            <td><input type='number' value=1 min=0 name={{hotel.id}}></td>
+        </tr>
+        {% endfor %}
+    </table> -->
+    <input type='submit' value="Book Now">
+  </form>
+  <!-- {% for hotel in hotels %} -->
+	<div class="div3" style="text-align: left;">
+    <p style="font-size: 1.85em">{{hotel.name}}
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star checked"></span>
+      <span class="fa fa-star"></span>
+    </p>Rohini
+  </div>
+  {% endfor %}
+<!------>
+
+
+<!-- SLIDER IMGAGES-->
+	<div id="div4" >
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner" >
+    <div class="carousel-item active">
+      <img src="{% static 'images/11.jpg' %}" class="d-block w-100" alt="..." height="280px"  >
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/12.jpg' %}" class="d-block w-100" alt="..." height="280px">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/13.jpeg' %}" class="d-block w-100" alt="..." height="280px">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/13.jpg' %}" class="d-block w-100" alt="..." height="280px">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+	</div>
+	<!-------->
+
+
+
+	<div class="div5">info</div>
+	<div class="div6">register</div>
+
+
+
+
+<!--USER RATING-->
+<div class="div7"><span class="heading">User Rating</span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<p>4.1 average based on 254 reviews.</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>150</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>63</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>15</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>6</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>20</div>
+  </div>
+</div>
+</div>
+<!------>
+
+
+
+<div class="div9"></div>
+<div class="div10">more info</div>
+<!-------->
+	<div class="div8"><footer class="panel-footer">
+      <div class="container">
+        <div class="row">
+          <section id="hours" class="col-sm-4">
+            <span>Contact Us </span><br>
+            Mon-Sat: 9:00am - 10:00pm<br>
+            <img class="img" src="{% static 'images\pic2.png' %}" alt="Hotel" />
+            Sunday Off <br>
+            Email: info@project.com <br>
+            Phone: 0987654321
+            <hr class="visible-xs">
+          </section>
+          <section id="address" class="col-sm-4">
+            <span>Booking</span><br>
+            Hotels<br>
+            <hr class="visible-xs">
+          </section>
+          <section id="testimonials" class="col-sm-4">
+            <p style="font-size: 20px;">Newsletter</p>
+              <form>
+                <input type="text" placeholder="Email" name="email">
+                <input type="submit" name="password "> <!-- Diff bw this type=submit and button -->
+              </form>
+            <p onclick="alert('Thank You for subscribing to our Newsletter');">
+              Subscribe  <!-- Make it a button -->
+            </p>
+          </section>
+        </div>
+      </div>
+    </footer>
+   
+
+    
+
+</main>
+
+</body>
+</html>

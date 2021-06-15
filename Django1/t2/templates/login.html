@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: antiquewhite;">
+
+    <h1>Admin (Superuser) Login Page</h1>
+    <a href='/home/'>Home</a>
+    <form method="post" action="/adminauthenticate/">
+        {% csrf_token %}
+        <input type="text" placeholder="username" name="username">
+        <input type="password" placeholder="password" name="password">
+        <input type="submit" name="">
+
+    </form>
+
+    {% for message  in messages %}
+    <p style="color: red;">
+        {{message}}
+    </p>
+    {% endfor %}
+
+</body>
+</html>
