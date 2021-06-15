@@ -6,7 +6,7 @@
      margin-top: 200px;
      margin-left: 50px;
      margin-right: 100px;
-     height: 250px;
+     height: 270px;
      border-radius: 20px;
      background-color: rgb(221, 226, 225);
      background-image: url("../images/1-14085_beach-hotel-background-hd.jpg");
@@ -21,7 +21,7 @@
      height: 250px;
      border-radius: 20px;
      background-color: rgb(221, 226, 225);
-     background-image: url("pool-for-google-blog.jpg");
+     background-image: url("../images/pool-for-google-blog.jpg");
      background-repeat: no-repeat;
      background-position-x: left;
      background-size: contain;
@@ -53,6 +53,13 @@
      background-size: contain;
      background-size: 450px;
     }
+    .price {
+      position: relative;
+      top: 100px;
+      left: 1100px;
+      font-family:'Times New Roman', Times, serif;
+      font-size:x-large;
+    }
 
     #a{
        left: 550px; 
@@ -68,28 +75,32 @@ background-color: antiquewhite;
 }
 
 .ab1{
- position: absolute;
- top: 280px;
- left: 550px;
- border-radius: 10px;
+  position: relative;
+  top: 70px;
+  left: 500px;
+  margin-right: 900px;
+  border-radius: 10px;
 }
 .ab2{
- position: absolute;
- top: 730px;
- left: 550px;
- border-radius: 10px;
+  position: relative;
+  top: 70px;
+  left: 500px;
+  margin-right: 900px;
+  border-radius: 10px;
    }
 .ab3{
- position: absolute;
- top: 1180px;
- left: 550px;
- border-radius: 10px;
+  position: relative;
+  top: 70px;
+  left: 500px;
+  margin-right: 900px;
+  border-radius: 10px;
    }
 .ab4{
- position: absolute;
- top: 1630px;
- left: 550px;
- border-radius: 10px;
+  position: relative;
+  top: 70px;
+  left: 500px;
+  margin-right: 900px;
+  border-radius: 10px;
    }
 
 .accordion {

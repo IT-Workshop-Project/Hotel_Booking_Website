@@ -33,7 +33,8 @@
 
 {% for hotel in hotels %}
 <div class="a">
-  
+  <div class="price"><b>Price: {{hotel.price}}</b>
+  </div>
     <a href='/hotels/{{hotel.id}}/'><h2 id="a">{{hotel.name}}</a>
     <!-- <a href='/hotel/'><h2 id="a">{{hotel.name}}</a> -->
     <!-- <img src="{% static 'images/1-14085_beach-hotel-background-hd.jpg' %}"> -->
@@ -43,7 +44,7 @@
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star"></span>
     </h2>
- </div>
+
  <div class="ab1">
  <button class="accordion">Reviews</button>
  <!-- <p>Price</p> -->
@@ -108,8 +109,7 @@
 <div class="panel"></div>
 
 </div>
-
-<p>Price: {{hotel.price}}</p>
+</div>
 {% endfor %}
 
 <div class="b">
@@ -120,7 +120,7 @@
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star"></span>
     </h2>
- </div>
+ 
   <div class="ab2">
     <button class="accordion">Reviews</button>
    <div class="panel">
@@ -204,6 +204,7 @@
    </div>
    </div>
    </div>
+</div>
 </div>
 
 <script> 
