@@ -1,9 +1,9 @@
 *{margin: 0;padding: 0;box-sizing: border-box;}
 main{
-	width: 97%;margin:5px auto;background-color:#ffffff;
+	width: 97%;margin:5px auto;
 	  border-radius: 10px;
 	display: grid;
-	grid-template-rows: 70px 180px 80px 280px 220px 300px;
+	grid-template-rows: 70px 185px 80px 300px 220px 300px;
 	grid-template-columns: 50% 30% 20%;
 	grid-gap:10px;
 }
@@ -14,20 +14,16 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  
 }
 
 li {
-  float: right;
+  float: left;
+  margin-left: 5px;
 }
 
-li a, .dropbtn {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+
+
 
 li a:hover, .dropdown:hover .dropbtn {
   background-color: red;
@@ -65,15 +61,15 @@ li.dropdown {
 
 	.div2{background-color:#2ed573;
 		grid-column: 1/-1;border-radius: 10px;overflow: hidden;}
-	.div3{background-color:white;
+	.div3{background-color:#9999ff;
 		grid-column: 1/-1;border-radius: 10px; overflow: hidden;}
 	#div4{background-color:#5352ed;border-radius:10px; overflow: hidden;}
 	
 	
-	.div5{background-color:#2f3542;border-radius: 10px; }
-	.div6{background-color:#ffa502;border-radius: 10px; }
+	.div5{border-radius: 10px; background-color:#2f3542}
+	.div6{background-color:#2f3542;border-radius: 10px; color: white;}
 	.div7{background-color:#ffffff;
-		grid-column: 1/2;border-radius: 10px;  }
+		grid-column: 1/2;border-radius: 10px;   }
   .div8{background-color:#f4a460;
     grid-column: 1/-1;border-radius: 10px;overflow: hidden;color: white}
   .div9{background-color:#2f3542;
@@ -113,7 +109,8 @@ li.dropdown {
 
 /* Place text to the right */
 .right {
-  text-align: right;
+  text-align: right
+  width:97%;
 }
 
 /* Clear floats after the columns */
@@ -280,4 +277,16 @@ li.dropdown {
 .login-container{
   text-align: right;
   margin-right: 50px;
+}
+.book{
+  background-color: orange;
+  color:white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+
 }
