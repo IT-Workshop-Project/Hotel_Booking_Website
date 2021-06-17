@@ -39,7 +39,17 @@
     <a href='/hotels/{{hotel.id}}/'><h2 id="a">{{hotel.name}}</a>
     <!-- <a href='/hotel/'><h2 id="a">{{hotel.name}}</a> -->
       {% if hotel.hotel_Main_Img %}
-      <img src="{{ hotel.hotel_Main_Img.url }}" style="margin-top: 200px; margin-left: 50px; margin-right: 100px;height: 270px;background-color: rgb(221, 226, 225);">
+      <img src="{{ hotel.hotel_Main_Img.url }}" style="  
+      position: relative;
+      left: -580px;
+      bottom: 45px;
+      height: 270px;
+      border-radius: 20px;
+      background-color: rgb(221, 226, 225);
+      height: 270px;
+      background-repeat: no-repeat;
+      background-position-x: left;
+      background-size: contain;">
       {% endif %}
       
     <span class="fa fa-star checked"></span>
