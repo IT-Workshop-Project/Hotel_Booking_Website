@@ -9,6 +9,10 @@ class HotelModel(models.Model):
     name = models.CharField(max_length=20)
     price = models.CharField(max_length=5)
     hotel_Main_Img = models.ImageField(upload_to='images/')
+    hotel_Main_Img1 = models.ImageField(upload_to='images/')
+    hotel_Main_Img2 = models.ImageField(upload_to='images/')
+    hotel_Main_Img3 = models.ImageField(upload_to='images/')
+
     totalprice = models.CharField(max_length=10)
 
 class Book(models.Model):

@@ -1,114 +1,61 @@
-.checked {
-    color: orange;
-  }
-
-.a {
-     margin-top: 200px;
-     margin-left: 50px;
-     margin-right: 100px;
-     height: 270px;
-     border-radius: 20px;
-     background-color: rgb(221, 226, 225);
-     background-image: url("../images/1-14085_beach-hotel-background-hd.jpg");
-     background-repeat: no-repeat;
-     background-position-x: left;
-     background-size: contain;
-    }
-    .b {
-     margin-top: 200px;
-     margin-left: 50px;
-     margin-right: 100px;
-     height: 250px;
-     border-radius: 20px;
-     background-color: rgb(221, 226, 225);
-     background-image: url("../images/pool-for-google-blog.jpg");
-     background-repeat: no-repeat;
-     background-position-x: left;
-     background-size: contain;
-    }
-
-    .c {
-     margin-top: 200px;
-     margin-left: 50px;
-     margin-right: 100px;
-     height: 250px;
-     border-radius: 20px;
-     background-color: rgb(221, 226, 225);
-     background-image: url("cabo-san-lucas-1920x1080-mexico-resort-hotel-sunset-sunrise-pool-1128.jpg");
-     background-repeat: no-repeat;
-     background-position-x: left;
-     background-size: contain;
-    }
-
-    .d {
-     margin-top: 200px;
-     margin-left: 50px;
-     margin-right: 100px;
-     height: 250px;
-     border-radius: 20px;
-     background-color: rgb(221, 226, 225);
-     background-image: url("background13-1920x1280.jpg");
-     background-repeat: no-repeat;
-     background-position-x: left;
-     background-size: contain;
-     background-size: 450px;
-    }
-    .price {
-      position: relative;
-      top: 100px;
-      left: 1100px;
-      font-family:'Times New Roman', Times, serif;
-      font-size:x-large;
-    }
-
-    #a{
-       left: 550px; 
-       position: absolute;
-       padding-right: 100px;
-       color: rgb(8, 8, 8);
-
-    }
-
 body {
-box-sizing: border-box;
-background-color: antiquewhite;
+  box-sizing: border-box;
+  background-color: antiquewhite;
+}
+.checked {
+  color: orange;
 }
 
-.ab1{
-  position: relative;
-  top: 70px;
-  left: 500px;
-  margin-right: 900px;
-  border-radius: 10px;
+.a, .b, .c , .d{
+   margin-top: 200px;
+   margin-left: 50px;
+   margin-right: 100px;
+   height: 270px;
+   border-radius: 20px;
+   background-color: rgb(221, 226, 225);
 }
-.ab2{
-  position: relative;
-  top: 70px;
-  left: 500px;
-  margin-right: 900px;
-  border-radius: 10px;
-   }
-.ab3{
-  position: relative;
-  top: 70px;
-  left: 500px;
-  margin-right: 900px;
-  border-radius: 10px;
-   }
-.ab4{
-  position: relative;
-  top: 70px;
-  left: 500px;
-  margin-right: 900px;
-  border-radius: 10px;
-   }
+/* .a{
+    background-image: url("../images/1-14085_beach-hotel-background-hd.jpg");
+} */
+
+.d{
+   background-image: url("../images/background13-1920x1280.jpg");
+   background-size: contain;
+   background-size: 450px;
+}
+.price {
+    position: relative;
+    top: 100px;
+    left: 1100px;
+    font-family:'Times New Roman', Times, serif;
+    font-size:x-large;
+}
+
+#a{
+     left: 550px; 
+     position: absolute;
+     padding-right: 100px;
+     color: rgb(8, 8, 8);
+
+}
+.ab1, .ab2 , .ab3, .ab4{
+position: relative;
+top: 70px;
+left: 500px;
+margin-right: 900px;
+border-radius: 10px;
+}
 
 .accordion {
 background-color: #eee;
+background-size: contain;
 color: #444;
 cursor: pointer;
 padding: 18px;
-width: 100%;
+width: 40%;
+position: absolute;
+top: 80px;
+left: 10px;
 border: none;
 text-align: left;
 outline: none;
@@ -116,24 +63,23 @@ font-size: 15px;
 transition: 0.4s;
 font-family: 'Times New Roman', Times, serif;
 border-radius: 10px;
-
-
 }
+
 .heading {
 font-size: 25px;
 margin-right: 25px;
 color: rgb(0, 0, 0);
 background-color: white;
 }
+
 .fa {
 font-size: 25px;
 }
-.checked {
-color: orange;
-}
+/* 
 .row{
 background-color: white;
-}
+} */
+
 .side {
 float: left;
 width: 15%;
@@ -141,26 +87,31 @@ margin-top:10px;
 color: rgb(0, 0, 0);
 background-color: white;
 }
+
 .middle {
 margin-top:10px;
 float: left;
 width: 70%;
 color: rgb(0, 0, 0);
 }
+
 .right {
 text-align: right;
 color: rgb(0, 0, 0);
 }
+
 .row:after {
 content: "";
 display: table;
 clear: both;
 }
+
 .bar-container {
 width: 100%;
 background-color: #f1f1f1;
 text-align: center;
 color: white;
+font-size: smaller;
 }
 .bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
 .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
@@ -170,7 +121,7 @@ color: white;
 
 @media (max-width: 400px) {
 .side, .middle {
-width: 100%;
+width: 50%;
 }
 .right {
 display: none;
@@ -184,9 +135,19 @@ background-color: #ccc;
 padding: 0 18px;
 display: none;
 background-color: rgb(247, 247, 247);
-overflow: hidden;
+overflow: scroll;
 border-radius: 10px;
+position: absolute;
+width: 500px;
+margin-left: 500px;
+margin-right: 900px;
+border-radius: 10px;
+font-size: smaller;
+height: 200px;
+box-sizing: 200px;
+
 }
+
 .topnav{
 position: absolute;
 top: 10px;  
@@ -200,8 +161,6 @@ text-align: center;
 padding: 14px 16px;
 text-decoration: none;
 font-size: 17px;
-
-
 }
 
 .topnav a:hover {
@@ -221,7 +180,7 @@ margin-left: 950px;
 }
 
 .topnav input[type=text] {
-  
+
 padding: 6px;
 margin-top: 8px;
 font-size: 17px;
@@ -246,23 +205,58 @@ background-color: green;
 }
 
 @media screen and (max-width: 600px) {
-.topnav .login-container {
-float: none;
-}
-.topnav a, .topnav input[type=text], .topnav .login-container button {
-float: none;
-display: inline-block;
-text-align: left;
-width: 100%;
-margin: 0;
-padding: 14px;
-}
-.topnav input[type=text] {
-border: 1px solid #ccc;  
-}
+  .topnav .login-container {
+  float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .login-container button {
+  float: none;
+  display: inline-block;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+  }
+  .topnav input[type=text] {
+  border: 1px solid #ccc;  
+  }
 }
 #a{
 background-color: rgb(221, 226, 225);
-
 }
+
+.panel-footer {
+   margin-top: 30px;
+   padding-top: 35px;
+   padding-bottom: 30px;  /* change to 0 and see the change*/
+   background-color: #202040;
+   border-top: 0;
+ }
+ .panel-footer div.row {
+   margin-bottom: 35px;
+ }
+ #hours, #address {
+   line-height: 2;
+ }
+ #hours > span, #address > span {
+   font-size: 1.3em;
+ }
+ #address p {
+   color: #557c3e;
+   font-size: .8em;
+   line-height: 1.8;
+ }
+ #testimonials {
+   font-style: italic;
+ }
+ 
+ .bottom {
+   background-color: #1a1a38;
+   /*margin-bottom: 100px;*/
+   height:  100px;
+ }
+ 
+ .copyright{  /* not .bottom div.copyright?*/
+   /*position: relative;   , how to place a text on the bottom*/  
+   margin-top:40px ;
+ }
  
