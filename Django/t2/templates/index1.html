@@ -121,34 +121,32 @@
     {% endfor %}
     
 
-    <div style="background-color: #e6e6e6; height: 180px">
+    <div style="background-color: #e6e6e6; height: 200px">
     <div class="container">
-        <div style="margin-top: 50px;" class="row">
+        <div style="margin-top: 50px;" class ="row">
           <section id = "searching" class="col-sm-4">
             <span style="color: black; font-size: 28px; font-family: cavolini;">SEARCH</span> <br>
             <span style="color: black; font-size: 26px; font-family: vendome regular"> Your </span>
             <span style="color: #f4a460; font-size: 26px; font-family: vendome regular"> Rooms </span>
           </section>
-          <section style="color: black;" class="col-sm-4" > <!-- See without class, padding-right: 20px; -->
-            <form method="POST" action ="/price/">
-              {% csrf_token %}
-              <label>Check-in Date</label>
-              <input type="date" placeholder="Check-in Date" name="check-in date" required> <br> <br>
-              <label>Check-out Date</label>
-              <input type="date" placeholder="Check-out Date" name="check-out date" required>
-            </form>
-          </section>
           <section style="color: black;" class="col-sm-4">
             <form method="POST" action ="/price/">
               {% csrf_token %}
+              <label>Check-in Date</label>
+              <input type="date" placeholder="Check-in Date" name ="check-in date" required> <br> <br>
+              <label>Check-out Date</label>
+              <input type="date" placeholder="Check-out Date" name ="check-out date" required>      
+          </section>
+          <section style="color: black;" class="col-sm-4">
               <label>Adult</label>
               <input type="number" placeholder="Adult" min = '1' name ="adult" required> <br> <br>
               <label>Children</label>
               <input type="number" placeholder="Children" min = '0' name ="Children" >
               <!-- initial value="0" -->
               <input type="submit" value="Search">
+            </section>
             </form>
-          </section>
+        
         </div>
       </div>
     </div>

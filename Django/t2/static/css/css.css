@@ -1,3 +1,4 @@
+
 .checked {
     color: orange;
   }
@@ -6,10 +7,10 @@
      margin-top: 200px;
      margin-left: 50px;
      margin-right: 100px;
-     height: 250px;
+     height: 270px;
      border-radius: 20px;
      background-color: rgb(221, 226, 225);
-     background-image: url("{% static 'images/1-14085_beach-hotel-background-hd.jpg' %}");
+     background-image: url("../images/1-14085_beach-hotel-background-hd.jpg");
      background-repeat: no-repeat;
      background-position-x: left;
      background-size: contain;
@@ -21,7 +22,7 @@
      height: 250px;
      border-radius: 20px;
      background-color: rgb(221, 226, 225);
-     background-image: url("pool-for-google-blog.jpg");
+     background-image: url("../images/pool-for-google-blog.jpg");
      background-repeat: no-repeat;
      background-position-x: left;
      background-size: contain;
@@ -34,7 +35,7 @@
      height: 250px;
      border-radius: 20px;
      background-color: rgb(221, 226, 225);
-     background-image: url("cabo-san-lucas-1920x1080-mexico-resort-hotel-sunset-sunrise-pool-1128.jpg");
+     background-image: url("../images/cabo-san-lucas-1920x1080-mexico-resort-hotel-sunset-sunrise-pool-1128.jpg");
      background-repeat: no-repeat;
      background-position-x: left;
      background-size: contain;
@@ -47,11 +48,19 @@
      height: 250px;
      border-radius: 20px;
      background-color: rgb(221, 226, 225);
-     background-image: url("background13-1920x1280.jpg");
+     background-image: url("../images/background13-1920x1280.jpg");
      background-repeat: no-repeat;
      background-position-x: left;
      background-size: contain;
      background-size: 450px;
+    }
+    .price {
+      position: relative;
+      top: 100px;
+      left: 1100px;
+      font-family:'Times New Roman', Times, serif;
+      font-size:x-large;
+
     }
 
     #a{
@@ -61,32 +70,36 @@
        color: rgb(8, 8, 8);
 
     }
-    * {
+    body {
 box-sizing: border-box;
 background-color: antiquewhite;
 }
 .ab1{
- position: absolute;
- top: 280px;
- left: 550px;
+ position: relative;
+ top: 70px;
+ left: 500px;
+ margin-right: 900px;
  border-radius: 10px;
 }
 .ab2{
- position: absolute;
- top: 730px;
- left: 550px;
+ position: relative;
+ top:  70px;
+ left: 500px;
+ margin-right: 900px;
  border-radius: 10px;
    }
 .ab3{
- position: absolute;
- top: 1180px;
- left: 550px;
+ position:relative;
+ top: 70px;
+ left: 500px;
+ margin-right: 900px;
  border-radius: 10px;
    }
 .ab4{
- position: absolute;
- top: 1630px;
- left: 550px;
+ position: relative;
+ top: 70px;
+ left: 500px;
+ margin-right: 900px;
  border-radius: 10px;
    }
 
