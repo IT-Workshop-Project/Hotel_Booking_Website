@@ -11,11 +11,10 @@
 	</script>
 </head>
 <body>
-
 	{% for hotel in hotel_images %}
 			<div class="col-md-4">
 					{{ hotel.name }}
-					<img src="{{ hotel.hotel_Main_Img.url }}" class="img-responsive" style ="width: 100%; float: left; margin-right: 10px;" />
+					<img src="{{ hotel.hotel_Main_Img.url }}" class ="img-responsive" style ="width: 100%; float: left; margin-right: 10px;" />
 			</div>
 	{% endfor %}
 

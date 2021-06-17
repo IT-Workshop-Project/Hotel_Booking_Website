@@ -30,14 +30,18 @@
       </form>
     </div>
   </div>
-
+  
 {% for hotel in hotels %}
 <div class="a">
-  <div class="price"><b>Price: {{hotel.price}}</b>
+  <div class="price"><b>Price: {{hotel.totalprice}}</b>
   </div>
+
     <a href='/hotels/{{hotel.id}}/'><h2 id="a">{{hotel.name}}</a>
     <!-- <a href='/hotel/'><h2 id="a">{{hotel.name}}</a> -->
-    <!-- <img src="{% static 'images/1-14085_beach-hotel-background-hd.jpg' %}"> -->
+      {% if hotel.hotel_Main_Img %}
+      <img src="{{ hotel.hotel_Main_Img.url }}" style="margin-top: 200px; margin-left: 50px; margin-right: 100px;height: 270px;background-color: rgb(221, 226, 225);">
+      {% endif %}
+      
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star checked"></span>
     <span class="fa fa-star checked"></span>

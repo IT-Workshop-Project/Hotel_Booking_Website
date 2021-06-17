@@ -1,23 +1,52 @@
-Hi Aditya
-<a class =' btn btn-danger' href='/logoutuser/'>Logout</a>
-<form method="POST" action="/add/">
-    {% csrf_token %}
-    <input type="text" class="form-control" name="pizza">
-    <input type="text" class="form-control" name="price">
-    <input type="submit" value="add" name="" class='btn btn-success'>
-</form>
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+  </head>
+    <!-- <link rel="stylesheet" href="C:\Users\adity\Documents\GitHub\Hotel_Booking_Website/style.css"> -->
+    <link rel="stylesheet" href="{% static 'css\bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
 
-<table style="width: 50%">
-    <tr>
-        <th>Hotel Name</th>
-        <th>Price</th>
-        <th>Delete</th>
-    </tr>
-    {% for hotel in hotels %}
-    <tr>
-        <td>{{hotel.name}}</td>
-        <td>{{hotel.price}}</td>
-        <td><a href="/delete/{{hotel.id}}/" class="btn btn-danger">Delete</a></td> <!-- diff bw href="" and href="#" and why delete/...doenst work  -->
-    </tr>
-    {% endfor %}
-</table>
+<body style="color: black; background-color: antiquewhite;">
+
+    <h1>Hi Aditya</h1>
+    <!-- <a class =' btn btn-danger' href='/logoutuser/' style="float: right; right:100px; top:10px;">Logout</a> -->
+    <a class =' btn btn-danger' href='/logoutuser/' style="position: absolute; right:20px; top:10px;">Logout</a>
+
+    <form method="POST" action="/add/" enctype ="multipart/form-data" style="width: 200px;">
+        {% csrf_token %}
+        <label>Hotel Name</label>
+        <input type="text" class="form-control" name="hotel"> <br>
+        <label>Hotel Price</label>
+        <input type="text" class="form-control" name="price">
+        <!-- <input type="submit" value="Add" name="" class='btn btn-success'> -->
+        <input type="file" name="imagename">
+        <button type="submit">Add</button>
+    </form>
+
+    <table style="width: 50%; padding-bottom: 20px;">
+        <tr>
+            <td><b>Hotel Name</b></td>
+            <td><b>Price</b></td>
+            <td><b>Total Price</b></td>
+            <td><b>Image</b></td>
+            <td><b>Delete</b></td>
+        </tr>
+        {% for hotel in hotels %}
+        <tr>
+            <td>{{hotel.name}}</td>
+            <td>{{hotel.price}}</td>
+            <td>{{hotel.totalprice}}</td>
+            {% if hotel.hotel_Main_Img %}
+            <td><img src="{{hotel.hotel_Main_Img.url}}"/></td>
+            {% endif %}
+            <td><a href="/delete/{{hotel.id}}/" class="btn btn-danger">Delete</a></td> <!-- diff bw href="" and href="#" and why delete/...doenst work  -->
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

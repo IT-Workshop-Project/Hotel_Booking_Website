@@ -110,11 +110,11 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner">
         <div class="item active">
-          <img src="{% static 'images/pic.png' %}">
+          <img src="{% static 'images/pic3.png' %}">
         </div>
 
         <div class="item">
-          <img src="{% static 'images/pic3.png' %}" alt="Chicago">
+          <img src="{% static 'images/pic.png' %}" alt="Chicago">
         </div>
 
         <div style="height: 665px;" class="item">
@@ -133,7 +133,12 @@
     </div>
 
     <h1 class="center">Welcome To Hotel Finder </h1>
-
+    {% for message  in messages %}
+    <p style="color: red;">
+        {{message}}
+    </p>
+    {% endfor %}
+    
 
     <div style="background-color: #e6e6e6; height: 200px">
       <div class="container">
@@ -167,9 +172,21 @@
     
     </div>
 
-    <div style="position: relative;">
-      <!-- <p style="color: black; text-align: center; font-size: 50px;"> Welcome </p> -->  
-      <p style="font-family: Times New Roman; left: 160px; font-size: 50px; position: absolute; top: 70px;">Welcome To Hotel Finder</p>        
+    <div style="position: relative; color:black;">
+      <!-- <p style="color: black; text-align: center; font-size: 50px;"> Welcome </p> -->        
+   <!--         <p style="color: black; text-align: center; font-size: 50px; position: absolute; top: 70px;">Welcome To Hotel Finder</p>-->   
+           <div style="font-family: Times New Roman; left: 140px; font-size: 50px; position: absolute; top: 70px;">
+             <p>Welcome To Hotel Finder</p>
+             <div style="font-size: 20px;">
+               <p><b>Hotel Finder </b>is a 5-star haven where luxury reigns supreme. Upscale comfort awaits in </p>
+               <p> stylishly appointed hotel rooms and suites, showcasing featherbed mattresses,  chic</p>
+               <p> décor, high-speed internet, marble bathrooms and 24-hour room service. Energize in </p>
+               <p>our well-equipped fitness center and refresh in the sparkling waters of our outdoor infinity </p>
+               <p> and salt-water pools. </p>
+               <p> Hotels showcased on our website are masterfully designed for your luxurious and </p>
+               <p> comforting experience.</p>
+             </div>
+           </div>  
            <img style="float: right; width: 350px; height: 300px; margin-right: 200px; position: relative;" src="{% static 'images/Pic5.jpg' %}">
            <img style="right: 80px; width: 250px; height: 300px; position: absolute; top: 50px;" src="{% static 'images/Pic6.jpg' %}">
            <img style="right: 270px; width: 360px; height: 240px; position: absolute; top: 200px;" src="{% static 'images/Pic4.png' %}">
@@ -201,7 +218,7 @@
           <section class="col-sm-4">
             <span> Gym </span> 
           </section>
-          <section class="col-sm-4">   <!-- Why white color by default -->
+          <section class="col-sm-4"> 
             <span> Free Wi-Fi </span>
           </section>
           <section style="color: black;" class="col-sm-4">
@@ -234,7 +251,7 @@
             <p style="font-size: 20px;">Newsletter</p>
               <form>
                 <input type="text" placeholder="Email" name="email">
-                <input type="submit" name="password "> <!-- Diff bw this type=submit and button -->
+                <input type="submit" name="password "> 
               </form>
             <p onclick="alert('Thank You for subscribing to our Newsletter');">
               Subscribe  <!-- Make it a button -->
@@ -249,9 +266,15 @@
       <p> All rights reserved</p>
     </footer>
 
+      {% for message  in messages %}
+      <p style="color: black; text-align: center; margin-top: 14px; font-size: 22px;">
+          {{message}}
+      </p>
+      {% endfor %}
+
     <div style="background-color: #f4a460; height: 40px;" class="topbar">
       <a href='/logoutuser/' class ="btn btn-danger" style="float: right;">Logout</a>
-      <a href='/userbookings/'>My Bookings</a>
+      <a href='/userbookings/' class =' btn btn-success'>My Bookings</a>
     </div>
 
     <script src="js/jquery-2.1.4.min.js"></script>
@@ -259,4 +282,3 @@
     <script src="js/script.js"></script>
   </body>
 </html>
-<!-- Use of button attribute -->
