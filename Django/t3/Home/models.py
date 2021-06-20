@@ -12,6 +12,7 @@ class HotelModel(models.Model):
     hotel_Main_Img1 = models.ImageField(upload_to='images/')
     hotel_Main_Img2 = models.ImageField(upload_to='images/')
     hotel_Main_Img3 = models.ImageField(upload_to='images/')
+
     totalprice = models.CharField(max_length=10)
 
 class Book(models.Model):
@@ -19,3 +20,8 @@ class Book(models.Model):
     bookedhotel = models.CharField(max_length=20)
     name = models.CharField(max_length=20)
     Hotel_image = models.ImageField(upload_to='images/')
+    # checkin = models.DateField(null=False)
+    # checkout = models.DateField(null=False)
+
+# class Price(models.Model):
+#     totalamt = models.CharField(max_length=10)

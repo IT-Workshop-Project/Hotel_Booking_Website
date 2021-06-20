@@ -26,7 +26,8 @@ urlpatterns = [
     path('adminauthenticate/',authenticateadmin),
     path('admin/homepage/',adminhomepage, name = 'adminhomepage'),
     path('',homePage),
-    path('hotels/',page2,),
+    path('hotels/',page2,),  # ,name="list"
+    # path('home/',redirecthomePage),
     path('price/',price),
     path('add/',add),
     path('delete/<int:hotelpk>/',delete),
@@ -39,6 +40,11 @@ urlpatterns = [
     path('userbookings/',userbooking),
     path('hotels/<int:hotelp>/',specifichotel),
     path('cancel/<int:bookid>/',cancel),
+
+    # path('admin/homepage/', hotel_image_view, name = 'imagee_upload'),
+    path('hotel_images/', display_hotel_images, name = 'hotel_images'),
+    path('success', success, name = 'success')
+
 ]
 if settings.DEBUG:
         urlpatterns += static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

@@ -133,12 +133,15 @@ li a:hover{
 }
 
 
+<<<<<<< HEAD
 
 
 
 
 
 
+=======
+>>>>>>> ec70cc950dd7d364cf68c8a6012f9e62666d1421
 .panel-footer {
   margin-top: 30px;
   padding-top: 35px;
@@ -170,7 +173,11 @@ li a:hover{
   height:  100px;
 }
 
+<<<<<<< HEAD
 .copyright{  /* not .bottom div.copyright?*/
+=======
+.copyright{
+>>>>>>> ec70cc950dd7d364cf68c8a6012f9e62666d1421
   /*position: relative;   , how to place a text on the bottom*/  
   top:20px ;
 }
@@ -217,7 +224,10 @@ li a:hover{
   animation-name: bounce;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ec70cc950dd7d364cf68c8a6012f9e62666d1421
 .arrow {
   border: solid black;
   border-width: 0 3px 3px 0;
@@ -239,6 +249,7 @@ li a:hover{
   height: 150px;
 }
 
+<<<<<<< HEAD
 
 /*#searching{
   color: #000000;
@@ -247,12 +258,17 @@ li a:hover{
 
 /*When we use div.row , .class1 .class2 and > ?*/
 
+=======
+>>>>>>> ec70cc950dd7d364cf68c8a6012f9e62666d1421
 .Facilities{
   font-size: 20px;
   color: blueviolet;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ec70cc950dd7d364cf68c8a6012f9e62666d1421
 .topbar{
   overflow: hidden;
   position: fixed;
