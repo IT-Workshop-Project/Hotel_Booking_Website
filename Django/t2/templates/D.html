@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-	<link rel ="stylesheet" type="text/css" href="css\good.css">
+	<link rel ="stylesheet" type="text/css" href="{% static 'css/good.css' %}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	
@@ -35,32 +35,31 @@
 		
 		
 	<div class="div2"><div class="container">
-        <div style="margin-top: 50px;" class="row">
+        <div style="margin-top: 50px;" class ="row">
           <section id = "searching" class="col-sm-4">
             <span style="color: black; font-size: 28px; font-family: cavolini;">SEARCH</span> <br>
             <span style="color: black; font-size: 26px; font-family: vendome regular"> Your </span>
             <span style="color: #f4a460; font-size: 26px; font-family: vendome regular"> Rooms </span>
           </section>
-          <section style="color: black;" class="col-sm-4"> <!-- See without class -->
-            <form>
-              <input type="date" placeholder="Check-in Date" name="date"> <br> <br>
-              <input type="date" placeholder="Check-out Date" name="date">
-            </form>
+          <section style="color: black;" class="col-sm-4">
+            <form method="POST" action ="/price/">
+              {% csrf_token %}
+              &nbsp;<label>Check-in Date</label>
+              &nbsp;<input type="date" placeholder="Check-in Date" name ="check-in date" required> <br> <br>
+              <label>Check-out Date</label>
+              <input type="date" placeholder="Check-out Date" name ="check-out date" required>      
           </section>
           <section style="color: black;" class="col-sm-4">
-            <form>
-              <input type="text" placeholder="Adult" name="date"> <br> <br>
-              <input type="text" placeholder="Children" name="date">
+              &ensp;<label>Adult</label>
+              &emsp;<input type="number" placeholder="Adult" min = '1' name ="adult" required> <br> <br>
+              <label>Children</label>
+              <input type="number" placeholder="Children" min = '0' name ="Children">
+              <!-- initial value="0" -->
+              <input type="submit" value="Search">
+            </section>
             </form>
-            <select id="selectNumber">
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </section>
-            <a style="font-size: 15px; text-align:right;" href= "website2.html"><button style="padding: 3px 2px;background-color: orange;color: white;margin:4px 4px;border-radius: 2px;"> Update</button> </a>  <!-- Add class/id here -->
+        
         </div>
-      </div>
     </div></div>
 <!----------------------------------------------------------------------->
 
