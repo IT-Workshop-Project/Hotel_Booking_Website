@@ -19,11 +19,9 @@ class Book(models.Model):
     username = models.CharField(max_length=20)
     bookedhotel = models.CharField(max_length=20)
     name = models.CharField(max_length=20)
-
-# class HotelForm(forms.ModelForm):
-#     class Meta:
-#         model = HotelModel
-#         fields = ['name', 'hotel_Main_Img']
+    Hotel_image = models.ImageField(upload_to='images/')
+    # checkin = models.DateField(null=False)
+    # checkout = models.DateField(null=False)
 
 # class Price(models.Model):
 #     totalamt = models.CharField(max_length=10)
