@@ -1,18 +1,18 @@
 body {
   font-size: 16px;
   color: #fff;
-  background-color: #fff; /*f4a460*/
+  background-color: #fff; 
   font-family: 'Oxygen', sans-serif;
 }
-/*bf325a   , eb4c34*/
+
 .center {
   position: absolute;
-  top: 19%;
+  top: 20%;
   left: 29%;
   font-family: Times New Roman; 
   /* transform: translate(-50%, -50%); */
   color: white; 
-  font-size: 60px;  /* role of font size in h1*/
+  font-size: 60px;
   /*color: rgba(5,5,5,0.8);  does this overwrite the previous color*/
   animation-name: welcome;
   /* animation-timing-function: linear; */
@@ -20,13 +20,16 @@ body {
   animation-fill-mode: forwards;
   visibility:hidden;
   animation-delay:0.6s;
+  animation: fadeIn4 2s;
 }
 
-@keyframes welcome {
+@keyframes fadeIn4 {
+  0% {opacity:0;}
+  100% {opacity:1;}
   from {top: 10%;}
   to {top: 20%;}
-  
 }
+
 .center1 {
   position: absolute;
   top: 35%;
@@ -45,12 +48,12 @@ body {
 }
 
 .anim{
-  animation-name: aa;
-  animation-duration: 2s;
+  /* animation-name: aa; */
+  animation-duration: 3s;
   animation-fill-mode: forwards;
+  animation: fadeIn0 3s;
   /* visibility:hidden; */
   /* animation-delay:0.6s; */
-
   position: absolute; 
   font-family: Times New Roman; 
   left: 130px; 
@@ -58,7 +61,9 @@ body {
   top: 70px;
 }
 
-@keyframes aa {
+@keyframes fadeIn0 {
+  0% {opacity:0;}
+  100% {opacity:1;}
   from {left: 80px;}
   to {left: 130px;}
 }
@@ -80,34 +85,45 @@ body {
 }
 
 .anim2{
-  animation-name: b;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
+  animation: fadeIn1 3s;
 }
 
-@keyframes b {
+@keyframes fadeIn1 {
+  0% {opacity:0;}
+  100% {opacity:1;}
   from {margin-right: 150px;}
   to {margin-right: 200px;}
 }
 
-.anim3{
-  animation-name: c;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
+@-webkit-keyframes fadeIn1 {
+  0% {opacity:0;}
+  100% {opacity:1;}
 }
 
-@keyframes c {
+.anim3{
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation: fadeIn2 3s;
+}
+
+@keyframes fadeIn2 {
+  0% {opacity:0;}
+  100% {opacity:1;}
   from {right: 30px;}  /* If we use margin-right? */
   to {right: 80px;}
 }
 
 .anim4{
-  animation-name: d;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
+  animation: fadeIn3 3s;
 }
 
-@keyframes d {
+@keyframes fadeIn3 {
+  0% {opacity:0;}
+  100% {opacity:1;}
   from {right: 220px;}
   to {right: 270px;}
 }
@@ -154,7 +170,7 @@ body {
   outline: none;
   color: white;
   padding: 14px 16px;
-  background-color: inherit;  /* inherit means?*/
+  background-color: inherit;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
 }
@@ -237,27 +253,10 @@ body {
   padding: 3px;
 }
 
-/*.img{
-  width = 120%;
-}*/
-
-/*.col-sm-4{
-  color: blue;
-}
-*/
-
 .Search{ /* search doesnt work*/
   background-color: #e6e6e6;
   height: 150px;
 }
-
-
-/*#searching{
-  color: #000000;
-  font-size: 28px;
-}*/
-
-/*When we use div.row , .class1 .class2 and > ?*/
 
 .Facilities{
   font-size: 20px;
@@ -271,7 +270,7 @@ body {
 
 .topbar{
   overflow: hidden;
-  position: fixed;  /*absolute?*/
+  position: fixed;
   top: 0;
   width: 100%;
 }
@@ -280,8 +279,6 @@ body {
   text-align: right;
   margin-right: 50px;
 }
-
-
 
 .header {
   position: fixed;
@@ -297,10 +294,9 @@ body {
 }
 .progress-bar {
   height: 8px;
-  background: #ff7a59; /*or #ccc*/
+  background: #ff7a59;
   width: 0%;
 }
-
 
   /*add full-width input fields*/
   input[type=text],
@@ -311,6 +307,7 @@ body {
     display: inline-block;
     border: 2px solid #ccc;
     box-sizing: border-box;
+    border-radius: 4px;
   }
 
   /* set a style for all buttons*/
@@ -402,7 +399,6 @@ body {
     }
   }
 
-
   .flip-card {
     background-color: transparent;
     width: 300px;
@@ -471,4 +467,20 @@ button:hover{
 .search_btn:hover{
   background-color: #f4a460;
   color: white;
+}
+
+.subs-btn{
+  background-color: white;
+  color: black;
+  border-color: #1a1a38;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 110px;
+  padding: 6px 14px;
+}
+
+.subs-btn:hover{
+  background-color: rgb(111, 101, 240);
+  color: white;
+  cursor: pointer;
 }

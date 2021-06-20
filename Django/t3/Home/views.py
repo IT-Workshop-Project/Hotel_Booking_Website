@@ -17,7 +17,7 @@ def homePage(request):
 
 def page2(request):
     context = {'hotels': HotelModel.objects.all()}
-    return render(request, "1.html",context)
+    return render(request, "hotels.html",context)
 
 def logoutuser(request):
     logout(request)
@@ -41,7 +41,6 @@ def adminhomepage(request):
     if not request.user.is_authenticated:
         return redirect(homePage)
     
-
     context = {'hotels': HotelModel.objects.all()}
     return render(request,"adminhomepage.html",context)
 
@@ -57,49 +56,40 @@ def price(request):
     date2 = request.POST['check-out date']
     your_date_string1 = date1
     your_date_string2 = date2
-
-    # for book in Book.objects.filter(username = request.user.username):
-    #     # book.checkin = date1
-    #     # book.checkout = date2
-    #     Book(username = request.user.username, checkin = date1, checkout = date2).save()
-
-
     datetime_object1 = datetime.strptime(your_date_string1, "%Y-%m-%d")
     datetime_object2 = datetime.strptime(your_date_string2, "%Y-%m-%d")
-    days = datetime_object2-datetime_object1
-    # date1 = date1.split('-')
-    # date2 = date2.split('-')
-    # d1=int(date1[2])
-    # d2=int(date2[2])
-    days=str(days)
-    print(type(days))
-    print(days)
-    # days=int(days)
-    # days = d2-d1
-    # name=request.HotelModel.name
-    # for hotel in HotelModel.objects.all():
-    #     hotell = hotel.id
-    #     spechotel = HotelModel.objects.filter(id=hotell)
+    days1 = datetime_object2 - datetime_object1
+    days = str(days1)
 
-    price = days*(adult*500 + children*500)
-    #print(price)
+    # days = days.split(',')
+    # days = days[0]
+    # days = days.split(' ')
+    # diff = days[0]
+    # diff = int(diff)
+    # print(diff)
 
+    days=list(days)
+    days[0]=int(str(days[0]+days[1]))
+    diff=days[0]
+    
     for hotel in HotelModel.objects.all():
         hotelid = hotel.id
         price = hotel.price
         price = int(price)
-        #totalprice1 = days*(price)*(adult+children)
-        #totalprice1 = int(totalprice1)
-        #hotel.totalprice = totalprice1
+        totalprice1 = diff*(price)*(adult+children)
+        totalprice1 = int(totalprice1)
+        for p in HotelModel.objects.filter(id=hotelid):
+            p.totalprice = totalprice1
+            p.save()
 
-        # for hotel in HotelModel.objects.filter(id=hotelid):
-        #     idhotel = hotel.id
-        #     hotel.totalprice = totalprice1
-            # HotelModel(totalprice = totalprice1).save()
-    #print(hotel.totalprice)
-    # price = days*(adult*price + children*price)
-    context = {'hotels': HotelModel.objects.all()}
-    return render(request,'1.html', context)
+    for a in HotelModel.objects.all():
+        amt = hotel.totalprice
+        for x in amt:
+            if x<amt:
+                x=amt
+    
+    context = {'hotels': HotelModel.objects.all(),'cheapest':HotelModel.objects.filter(totalprice = x)}
+    return render(request,'hotels.html', context)
 
 def add(request):
     name = request.POST['hotel']
@@ -110,7 +100,7 @@ def add(request):
     image3 = request.FILES['image3']
 
     HotelModel(name = name, price = price, totalprice = 0, hotel_Main_Img = image, hotel_Main_Img1 = image1, hotel_Main_Img2 = image2, hotel_Main_Img3 = image3 ).save()
-    return redirect(adminhomepage)  # Why not return render(adminhomepage)
+    return redirect(adminhomepage)
 
 def delete(request,hotelpk):
     HotelModel.objects.filter(id = hotelpk).delete()
@@ -162,27 +152,16 @@ def book(request,hotelp):
         return redirect(homePage)
 
     username = request.user.username
-    bookedhotel = ''
     context = {'hotels':HotelModel.objects.filter(id=hotelp)}
-    
-    # for hotel in HotelModel.objects.all():
-    #     hotelid = hotel.id
-    #     name = hotel.name
-    #     price = hotel.price
-    #     quantity = request.POST.get(str(hotelid),' ')
-    
-    #     if str(quantity)!='0' and str(quantity)!=' ':
-    #         bookedhotel = bookedhotel + name + ' ' + price + 'quantity: '+ quantity
 
     for hotel in HotelModel.objects.filter(id=hotelp):
-        # hotelid = hotel.id
         name = hotel.name
         price = hotel.price
         image = hotel.hotel_Main_Img
 
     Book(username = username, name = name, Hotel_image = image).save()
     messages.add_message(request, messages.SUCCESS,'Hotel Booked Successfully')
-    return redirect(customerwelcome)  # What if I don't return
+    return redirect(customerwelcome)
 
 def userbooking(request):
     bookings = Book.objects.filter(username = request.user.username)
@@ -191,16 +170,7 @@ def userbooking(request):
 
 def specifichotel(request,hotelp):
     context = {'hotels':HotelModel.objects.filter(id=hotelp)}
-    return render(request, 'page.html', context)
-  
-def success(request):
-    return HttpResponse('successfully uploaded')
-
-def display_hotel_images(request):
-    if request.method == 'GET':
-        # getting all the objects of hotel.
-        Hotels = HotelModel.objects.all() 
-        return render(request, 'display_hotel_images.html',{'hotel_images' : Hotels})
+    return render(request, 'page1.html', context)
 
 def cancel(request,bookid):
     messages.add_message(request, messages.ERROR, "Booking successfully cancelled")

@@ -1,0 +1,179 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %}
+  Hotels
+{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css\css.css' %}">
+{% endblock %}
+    
+{% block content %}
+
+    <!-- <h4>Price</h4> -->
+    <div style = "height: 100px;"></div>
+    <h2 style="text-align: center; color: blue">Cheapest Hotel</h2>
+    {% for low in cheapest %}
+
+    <div class='cont' style="background-color: rgb(210, 224, 222); border-radius: 20px; margin-left: 50px; margin-right: 100px; margin-bottom: 200px;">
+      <img src="{{ low.hotel_Main_Img.url }}" style ="position: relative; height: 300px;width: 500px;border-radius: 20px;">
+      <span style="position: relative; top:-110px; left: 40px; font-size: 30px; "><a href='/hotels/{{low.id}}/' style="text-decoration: none;">{{low.totalprice}}</a>
+          <button class="accordion" style="width: 120%;">Reviews</button>
+           <div class="panel">
+             <span class="heading">User Rating</span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star checked"></span>
+           <span class="fa fa-star"></span>
+           <p class="heading">4.1 average based on 254 reviews.</p>
+           <hr style="border:3px solid #f1f1f1">
+           
+           <div class="row">
+             <div class="side">5 star</div>
+             <div class="middle">
+               <div class="bar-container">
+                 <div class="bar-5"></div>
+               </div>
+             </div>
+             <div class="side right">150</div>
+             <div class="side">4 star</div>
+             <div class="middle">
+               <div class="bar-container">
+                 <div class="bar-4"></div>
+               </div>
+             </div>
+             <div class="side right">
+               <div>63</div>
+             </div>
+             <div class="side">3 star</div>
+             <div class="middle">
+               <div class="bar-container">
+                 <div class="bar-3"></div>
+               </div>
+             </div>
+             <div class="side right">15</div>
+             <div class="side">2 star</div>
+             <div class="middle">
+               <div class="bar-container">
+                 <div class="bar-2"></div>
+               </div>
+             </div>
+             <div class="side right">6</div>
+             <div class="side">1 star</div>
+             <div class="middle">
+               <div class="bar-container">
+                 <div class="bar-1"></div>
+               </div>
+             </div>
+             <div class="side right">20</div>
+           </div>
+           
+           </div>
+          
+          </button>
+      </span>
+  </div>
+
+{% endfor %}
+<hr class="visible-xs">
+
+  <hr size="20" style="color: black;">
+
+    {% for hotel in hotels %}
+    <div class='cont' style="background-color: rgb(210, 224, 222); border-radius: 20px; margin-left: 50px; margin-right: 100px; margin-bottom: 200px;">
+        <img src="{{ hotel.hotel_Main_Img.url }}" style ="position: relative; height: 300px;width: 500px;border-radius: 20px;">
+        <span style="position: relative; top:-110px; left: 40px; font-size: 30px; "><a href='/hotels/{{hotel.id}}/' style="text-decoration: none;">{{hotel.name}}</a>
+            <button class="accordion" style="width: 120%;">Reviews</button>
+              <!-- <p>Price</p> -->
+             <div class="panel">
+               <span class="heading">User Rating</span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star"></span>
+             <p class="heading">4.1 average based on 254 reviews.</p>
+             <hr style="border:3px solid #f1f1f1">
+             
+             <div class="row">
+               <div class="side">5 star</div>
+               <div class="middle">
+                 <div class="bar-container">
+                   <div class="bar-5"></div>
+                 </div>
+               </div>
+               <div class="side right">150</div>
+               <div class="side">4 star</div>
+               <div class="middle">
+                 <div class="bar-container">
+                   <div class="bar-4"></div>
+                 </div>
+               </div>
+               <div class="side right">
+                 <div>63</div>
+               </div>
+               <div class="side">3 star</div>
+               <div class="middle">
+                 <div class="bar-container">
+                   <div class="bar-3"></div>
+                 </div>
+               </div>
+               <div class="side right">15</div>
+               <div class="side">2 star</div>
+               <div class="middle">
+                 <div class="bar-container">
+                   <div class="bar-2"></div>
+                 </div>
+               </div>
+               <div class="side right">6</div>
+               <div class="side">1 star</div>
+               <div class="middle">
+                 <div class="bar-container">
+                   <div class="bar-1"></div>
+                 </div>
+               </div>
+               <div class="side right">20</div>
+             </div>
+             
+             </div>
+            
+            </button>
+        </span>
+
+            <!-- <p>Price</p> -->
+        
+        <!-- <div class="container" style=" color: white;">
+            <div class="row">
+                <section id="hours" class="col-sm-4">
+                </section>
+                <section id="hours" class="col-sm-4">
+                    <span>Contact Us </span><br>
+                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    Mon-Sat: 9:00am - 10:00pm<br>
+                </section>
+            </div>
+        </div> -->
+
+    </div>
+    {% endfor %}
+            <script>
+                var acc = document.getElementsByClassName("accordion");
+                var i;
+                for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                  /* Toggle between adding and removing the "active" class, to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    /* Toggle between hiding and showing the active panel */
+                    if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                    } else {
+                    panel.style.display = "block";
+                    }
+                });
+                }
+            </script>
+
+{% endblock %}

@@ -25,8 +25,8 @@ body {
 }
 .price {
     position: relative;
-    top: 80px;
-    left: 300px;
+    top: 100px;
+    left: 1100px;
     font-family:'Times New Roman', Times, serif;
     font-size:x-large;
 }
