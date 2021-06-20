@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-	<link rel ="stylesheet" type="text/css" href="css\good.css">
+	<link rel ="stylesheet" type="text/css" href="{% static 'css/good.css' %}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	
@@ -35,43 +35,42 @@
 		
 		
 	<div class="div2"><div class="container">
-        <div style="margin-top: 50px;" class="row">
+        <div style="margin-top: 50px;" class ="row">
           <section id = "searching" class="col-sm-4">
             <span style="color: black; font-size: 28px; font-family: cavolini;">SEARCH</span> <br>
             <span style="color: black; font-size: 26px; font-family: vendome regular"> Your </span>
             <span style="color: #f4a460; font-size: 26px; font-family: vendome regular"> Rooms </span>
           </section>
-          <section style="color: black;" class="col-sm-4"> <!-- See without class -->
-            <form>
-              <input type="date" placeholder="Check-in Date" name="date"> <br> <br>
-              <input type="date" placeholder="Check-out Date" name="date">
-            </form>
+          <section style="color: black;" class="col-sm-4">
+            <form method="POST" action ="/price/">
+              {% csrf_token %}
+              &nbsp;<label>Check-in Date</label>
+              &nbsp;<input type="date" placeholder="Check-in Date" name ="check-in date" required> <br> <br>
+              <label>Check-out Date</label>
+              <input type="date" placeholder="Check-out Date" name ="check-out date" required>      
           </section>
           <section style="color: black;" class="col-sm-4">
-            <form>
-              <input type="text" placeholder="Adult" name="date"> <br> <br>
-              <input type="text" placeholder="Children" name="date">
+              &ensp;<label>Adult</label>
+              &emsp;<input type="number" placeholder="Adult" min = '1' name ="adult" required> <br> <br>
+              <label>Children</label>
+              <input type="number" placeholder="Children" min = '0' name ="Children">
+              <!-- initial value="0" -->
+              <input type="submit" value="Search">
+            </section>
             </form>
-            <select id="selectNumber">
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </section>
-            <a style="font-size: 15px; text-align:right;" href= "website2.html"><button style="padding: 3px 2px;background-color: orange;color: white;margin:4px 4px;border-radius: 2px;"> Update</button> </a>  <!-- Add class/id here -->
+        
         </div>
-      </div>
     </div></div>
 <!----------------------------------------------------------------------->
 
 
 
-	<div class="div3" align="left"><p style="font-size: 1.85em"><b></style>Radisson Blu Plaza</b>
+	<div class="div3" align="left"><p style="font-size: 1.85em"><b></style>Hotel Novotel</b>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>   <font color="yellow" ><b>4.1/5</b></font></p><b style="margin: 3px;">Rohini, New Delhi</b></div>
+<span class="fa fa-star"></span>   <font color="yellow" ><b>4.2/5</b></font></p><b style="margin: 3px;">Aerocity, New Delhi</b></div>
 <!------>
 
 
@@ -87,16 +86,16 @@
   </div>
   <div class="carousel-inner" >
     <div class="carousel-item active">
-      <img src="{% static 'images/D1.jpeg' %}" class="d-block w-100" alt="..." height="300px"  >
+      <img src="{% static 'images/C1.jpeg' %}" class="d-block w-100" alt="..." height="300px"  >
     </div>
     <div class="carousel-item">
-      <img src="{% static 'images/D2.jpeg' %}" class="d-block w-100" alt="..." height="300px">
+      <img src="{% static 'images/C2.jpeg' %}" class="d-block w-100" alt="..." height="300px">
     </div>
     <div class="carousel-item">
-      <img src="{% static 'images/D3.jpeg' %}" class="d-block w-100" alt="..." height="300px">
+      <img src="{% static 'images/C3.jpeg' %}" class="d-block w-100" alt="..." height="300px">
     </div>
     <div class="carousel-item">
-      <img src="{% static 'images/D4.jpeg' %}" class="d-block w-100" alt="..." height="300px">
+      <img src="{% static 'images/C4.jpeg' %}" class="d-block w-100" alt="..." height="300px">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -132,8 +131,8 @@
 		<h3 style="text-align: center; color: white ; padding-top: 4px;">Price</h3>
 		<p style="text-align: center; margin-top: 0px;" >starts at</p>
 		<hr style="color:#ddddff">
-		<h4 style="text-align: center; color: orange;">&#8377 1925</h4>
-		<p style="color: white; text-align: center;">+ &#8377 448 taxes & fees</p>
+		<h4 style="text-align: center; color: orange;">&#8377 2599</h4>
+		<p style="color: white; text-align: center;">+ &#8377 311 taxes & fees</p>
 		<hr style="color:#ddddff">
 		<p style="text-align: center; padding-top: 15px"><button class="book">Book Now</button></p>
 
@@ -151,7 +150,7 @@
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star"></span>
-<p>4.1 average based on 254 reviews.</p>
+<p>4.2 average based on 503 ratings</p>
 <hr style="border:3px solid #f1f1f1">
 
 <div class="row" style="text-align: center;">
@@ -164,7 +163,7 @@
     </div>
   </div>
   <div class="side right">
-    <div>150</div>
+    <div>290</div>
   </div>
   <div class="side">
     <div>4 star</div>
@@ -175,7 +174,7 @@
     </div>
   </div>
   <div class="side right">
-    <div>63</div>
+    <div>115</div>
   </div>
   <div class="side">
     <div>3 star</div>
@@ -186,7 +185,7 @@
     </div>
   </div>
   <div class="side right">
-    <div>15</div>
+    <div>42</div>
   </div>
   <div class="side">
     <div>2 star</div>
@@ -197,7 +196,7 @@
     </div>
   </div>
   <div class="side right">
-    <div>6</div>
+    <div>23</div>
   </div>
   <div class="side">
     <div>1 star</div>
@@ -208,7 +207,7 @@
     </div>
   </div>
   <div class="side right">
-    <div>20</div>
+    <div>33</div>
   </div>
 </div>
 </div>
@@ -263,6 +262,8 @@
     
 
 </main>
-
+<script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>
