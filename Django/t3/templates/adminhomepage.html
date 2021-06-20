@@ -23,33 +23,31 @@
         <label>Hotel Price</label>
         <input type="text" class="form-control" name="price">
         <!-- <input type="submit" value="Add" name="" class='btn btn-success'> -->
-        <input type="file" name="imagename">
-        <input type="file" name="image1">
-        <input type="file" name="image2">
-        <input type="file" name="image3">
+        &nbsp; &nbsp;<input type="file" name="imagename"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="file" name="image1"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="file" name="image2"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <input type="file" name="image3"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         <button type="submit">Add</button>
     </form>
 
     <table style="width: 100%; padding-bottom: 20px;">
         <tr>
-            <td><b>Hotel Name</b></td>
-            <td><b>Price</b></td>
-            <td><b>Total Price</b></td>
-            <td style="text-align: center;"><b>Hotel Main Image</b></td>
+            <td><b> &nbsp; &nbsp;Hotel &nbsp;&nbsp;&nbsp;&nbsp;Name &nbsp; &nbsp;</b></td>
+            <td><b>Price&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
+            <td style="text-align: center;"><b>Hotel Main Image &nbsp; &nbsp; &nbsp; &nbsp;</b></td>
             <td style="text-align: center;"><b>Hotel Image</b></td>
             <td style="text-align: center;"><b>Hotel Image</b></td>
             <td style="text-align: center;"><b>Hotel Image</b></td>
-            <td><b>Delete</b></td>
+            <td style="text-align: center;"><b>Delete</b></td>
         </tr>
         {% for hotel in hotels %}
         <tr>
-            <td>{{hotel.name}}</td>
-            <td>{{hotel.price}}</td>
-            <td>{{hotel.totalprice}}</td>
-            <td><img src="{{hotel.hotel_Main_Img.url}}" style="height: 250px; width: 400px;margin-right: 20px;"/></td>
-            <td><img src="{{hotel.hotel_Main_Img1.url}}" style="height: 200px; width: 300px;"/></td>
-            <td><img src="{{hotel.hotel_Main_Img2.url}}" style="height: 200px; width: 300px;"/></td>
-            <td><img src="{{hotel.hotel_Main_Img3.url}}" style="height: 200px; width: 300px;"/></td>
+            <td style="text-align: center;">{{hotel.name}}</td>
+            <td style="margin-right: 20px;">{{hotel.price}}</td>
+            <td><img src="{{hotel.hotel_Main_Img.url}}" style="height: 200px; width: 300px;margin-right: 20px;"/></td>
+            <td><img src="{{hotel.hotel_Main_Img1.url}}" style="height: 200px; width: 300px;margin-right: 20px;"/></td>
+            <td><img src="{{hotel.hotel_Main_Img2.url}}" style="height: 200px; width: 300px;margin-right: 20px;"/></td>
+            <td><img src="{{hotel.hotel_Main_Img3.url}}" style="height: 200px; width: 300px;margin-right: 20px;"/></td>
             <td><a href="/delete/{{hotel.id}}/" class="btn btn-danger">Delete</a></td> <!-- diff bw href="" and href="#" and why delete/...doenst work  -->
         </tr>
         {% endfor %}
