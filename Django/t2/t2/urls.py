@@ -19,7 +19,7 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 
-from Home.views import add, adminhomepage, adminloginview, authenticateadmin, book, customerwelcome, delete, display_hotel_images, homePage, hotel_image_view, logoutuser, page2, page3, page4, price, redirecthomePage, signupuser, specifichotel, success, userauthenticate, userbooking, userlogin, usersignup 
+from Home.views import *
 
 urlpatterns = [
     # path('admin/', admin.site.urls),
@@ -34,9 +34,7 @@ urlpatterns = [
     path('price/',price),
     path('add/',add),
     path('delete/<int:hotelpk>/',delete),
-    path('usersignup/',usersignup),
     path('signupuser/',signupuser),
-    path('userlogin/',userlogin),
     path('authenticate/',userauthenticate),
     path('customerwelcome/',customerwelcome),
     # path('userlogout/',redirecthomePage),
@@ -46,8 +44,8 @@ urlpatterns = [
     path('hotels/<int:hotelp>/',specifichotel),
 
     path('image_upload/', hotel_image_view, name = 'image_upload'),
+    # path('admin/homepage/', hotel_image_view, name = 'imagee_upload'),
     path('success', success, name = 'success'),
     path('hotel_images/', display_hotel_images, name = 'hotel_images')
-
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
