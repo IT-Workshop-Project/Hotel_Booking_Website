@@ -1,17 +1,19 @@
-{% extends "index.html" %}
 {% load static %}
-
-{% block title %}
-  Hotels
-{% endblock %}
-
-{% block head %}
-  <link rel="stylesheet" href="{% static 'css\css.css' %}">
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css\bootstrap.min.css' %}">  <!-- both slash works -->
+    <link rel="stylesheet" href="{% static 'css\css.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-{% block content %}
-
-    <!-- <h4>Price</h4> -->
+    <title>Hotels</title>
+</head>
+<body>
+   <!--style="background-color: aqua;"
+        <h4>Price</h4> -->
     <div style = "height: 100px;"></div>
 
     {% for hotel in hotels %}
@@ -23,9 +25,67 @@
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star"></span>
-            <button style="font-size: 20px;" class="reviewss">Reviews</button>
-            <button style="font-size: 20px;" class="reviewss">Details</button>
+            
+              
+              <button class="accordion" style="width: 120%;">Reviews</button>
+              <!-- <p>Price</p> -->
+             <div class="panel">
+               <span class="heading">User Rating</span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star checked"></span>
+             <span class="fa fa-star"></span>
+             <p class="heading">4.1 average based on 254 reviews.</p>
+             <hr style="border:3px solid #f1f1f1">
+             
+             <div class="row">
+               <div class="side">5 star</div>
+               <div class="middle">
+                 <div class="bar-container">
+                   <div class="bar-5"></div>
+                 </div>
+               </div>
+               <div class="side right">150</div>
+               <div class="side">4 star</div>
+               <div class="middle">
+                 <div class="bar-container">
+                   <div class="bar-4"></div>
+                 </div>
+               </div>
+               <div class="side right">
+                 <div>63</div>
+               </div>
+               <div class="side">3 star</div>
+               <div class="middle">
+                 <div class="bar-container">
+                   <div class="bar-3"></div>
+                 </div>
+               </div>
+               <div class="side right">15</div>
+               <div class="side">2 star</div>
+               <div class="middle">
+                 <div class="bar-container">
+                   <div class="bar-2"></div>
+                 </div>
+               </div>
+               <div class="side right">6</div>
+               <div class="side">1 star</div>
+               <div class="middle">
+                 <div class="bar-container">
+                   <div class="bar-1"></div>
+                 </div>
+               </div>
+               <div class="side right">20</div>
+             </div>
+             
+             </div>
+             
+            
+            </button>
+          
         </span>
+        
             <!-- <p>Price</p> -->
         
         <!-- <div class="container" style=" color: white;">
@@ -39,16 +99,66 @@
                 </section>
             </div>
         </div> -->
+
+    
     </div>
     {% endfor %}
         <!-- <a href='/hotel/'><h2 id="a">{{hotel.name}}</a> -->
+
+        <footer class="panel-footer">
+            <div class="container" style=" color: white;">
+              <div class="row">
+                <section id="hours" class="col-sm-4">
+                  <span>Contact Us </span><br>
+                  <i class="fa fa-calendar" aria-hidden="true"></i>
+                  Mon-Sat: 9:00am - 10:00pm<br>
+                  &emsp; Sunday Off <br>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  Email: info@project.com <br>
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  Phone: 0987654321
+                  <hr class="visible-xs">
+                </section>
+                <section id="address" class="col-sm-4">
+                  <span>Booking</span><br>
+                  Hotels<br>
+                  <hr class="visible-xs">
+                </section>
+                <section id="testimonials" class="col-sm-4">
+                  <p style="font-size: 20px;">Newsletter</p>
+                    <form>
+                      <input type="text" placeholder="Email" name="email">
+                      <input type="submit" value='Subscribe' name="">
+                    </form>
+                  <p onclick="alert('Thank You for subscribing to our Newsletter');">
+                    Subscribe  <!-- Make it a button -->
+                  </p>
+                </section>
+              </div>
+            </div>
+          </footer>
+          <footer class="bottom" style="color: white;">
+            <div class='container'>
+              <div class='row'>
+                <section>
+            <!-- <div style="top:30px;"> &copy; Copyright IT Workshop Project</div>, <p> not working here -->
+                  <div class="Copyright"> &copy; 2021 Copyright IT Workshop Project</div> <!-- <p> not working here , use id here-->
+                  <p> All rights reserved</p>
+                </section>
+              </div>      
+            </div>
+          </footer>
+
     <script>
         var acc = document.getElementsByClassName("accordion");
         var i;
         for (i = 0; i < acc.length; i++) {
         acc[i].addEventListener("click", function() {
+          /* Toggle between adding and removing the "active" class,
+           to highlight the button that controls the panel */
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
+            /* Toggle between hiding and showing the active panel */
             if (panel.style.display === "block") {
             panel.style.display = "none";
             } else {
@@ -57,5 +167,8 @@
         });
         }
     </script>
-
-{% endblock %}
+    <script src="js/bootstrap.min.js"></script> 
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
