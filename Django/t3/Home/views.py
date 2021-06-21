@@ -72,8 +72,9 @@ def price(request):
     # d1=int(date1[2])
     # d2=int(date2[2])
     days=str(days)
-    print(type(days))
-    print(days)
+    days=list(days)
+    days[0]=int(str(days[0]+days[1]))
+    days=days[0]
     # days=int(days)
     # days = d2-d1
     # name=request.HotelModel.name
@@ -81,24 +82,30 @@ def price(request):
     #     hotell = hotel.id
     #     spechotel = HotelModel.objects.filter(id=hotell)
 
-    price = days*(adult*500 + children*500)
+    #price = days*(adult*500 + children*500)
     #print(price)
 
     for hotel in HotelModel.objects.all():
         hotelid = hotel.id
         price = hotel.price
         price = int(price)
-        #totalprice1 = days*(price)*(adult+children)
-        #totalprice1 = int(totalprice1)
-        #hotel.totalprice = totalprice1
-
-        # for hotel in HotelModel.objects.filter(id=hotelid):
-        #     idhotel = hotel.id
-        #     hotel.totalprice = totalprice1
-            # HotelModel(totalprice = totalprice1).save()
-    #print(hotel.totalprice)
-    # price = days*(adult*price + children*price)
-    context = {'hotels': HotelModel.objects.all()}
+        totalprice1 = days*(price)*(adult+children)
+        totalprice1 = int(totalprice1)
+        for p in HotelModel.objects.filter(id=hotelid):
+            p.totalprice = totalprice1
+            p.save()
+            print(price)
+    i=0
+    for a in HotelModel.objects.all():
+        amt = a.totalprice
+        if i==0:
+            x=amt
+        if amt<x:
+           x=amt
+        i=i+1
+            
+    
+    context = {'hotels': HotelModel.objects.all(),'cheapest':HotelModel.objects.filter(totalprice =x)}
     return render(request,'1.html', context)
 
 def add(request):
