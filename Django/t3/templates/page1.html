@@ -21,8 +21,7 @@
 	<div class="div1">
 	<ul style="margin-top: 20px">
 	<li><h3 style="color: white;">HOTEL FINDER</h3></li>
-  	<li><a href="index.html">HOME</a></li>
-  	<li><a href="#news">NEWS</a></li>
+  	<li><a href="/">HOME</a></li>
   
 
 	<div class="login-container">
@@ -63,14 +62,14 @@
         </div>
     </div></div>
 <!----------------------------------------------------------------------->
+{% for hotel in hotels %}
 
-<div class="div3" style="text-align: left;"><p style="font-size: 1.85em"><b>Radisson Blu Plaza</b>
+<div class="div3" style="text-align: left;"><p style="font-size: 1.85em"><b></style>{{hotel.name}}</b>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>   
-<b style="color: yellow;">4.1/5</b></p><b style="margin: 3px;">Rohini, New Delhi</b></div>
+<span class="fa fa-star"></span>   <font color="yellow" ><b>4.1/5</b></font></p><b style="margin: 3px;">Rohini, New Delhi</b></div>
 <!------>
 
 <!-- SLIDER IMGAGES-->
@@ -84,16 +83,16 @@
   </div>
   <div class="carousel-inner" >
     <div class="carousel-item active">
-      <img src="{% static 'images/D1.jpeg' %}" class="d-block w-100" alt="..." height="300px"  >
+      <img src="{{ hotel.hotel_Main_Img.url }}" class="d-block w-100" alt="..." height="300px"  >
     </div>
     <div class="carousel-item">
-      <img src="{% static 'images/D2.jpeg' %}" class="d-block w-100" alt="..." height="300px">
+      <img src="{{ hotel.hotel_Main_Img1.url }}" class="d-block w-100" alt="..." height="300px">
     </div>
     <div class="carousel-item">
-      <img src="{% static 'images/D3.jpeg' %}" class="d-block w-100" alt="..." height="300px">
+      <img src="{{ hotel.hotel_Main_Img2.url }}" class="d-block w-100" alt="..." height="300px">
     </div>
     <div class="carousel-item">
-      <img src="{% static 'images/D4.jpeg' %}" class="d-block w-100" alt="..." height="300px">
+      <img src="{{ hotel.hotel_Main_Img3.url }}" class="d-block w-100" alt="..." height="300px">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -106,6 +105,7 @@
   </button>
 </div>
 	</div>
+    {% endfor %}
 
 	<div class="div5" style="color:white">
 		<h3 style="text-align: center; color: white; padding-top: 4px;" >Amenities & Services</h3>
@@ -128,10 +128,15 @@
 		<h4 style="text-align: center; color: orange;">&#8377 1925</h4>
 		<p style="color: white; text-align: center;">+ &#8377 448 taxes & fees</p>
 		<hr style="color:#ddddff">
-		<p style="text-align: center; padding-top: 15px"><button class="book">Book Now</button></p>
+		<p style="text-align: center; padding-top: 15px">
+            {% for hotel in hotels %}
+            <form method="POST" action="/book/{{hotel.id}}/">
+              {% endfor %}
+              {% csrf_token %}
+              <button class='book' type='submit'>Book Now</button>
+            </form>
 		
 	</div>
-
 
 <!--USER RATING-->
 <div class="div7"><span class="heading"><b style="margin-left: 5px;">User Rating</b></span>
