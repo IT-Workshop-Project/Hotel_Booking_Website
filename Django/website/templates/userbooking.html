@@ -18,10 +18,8 @@
 <table style="width: 98%; padding-bottom: 20px; margin: 20px; background-color: blanchedalmond;">
     <tr style="text-align: center; font-weight: bold;">
         <td><h2><b>Hotel Name</b></h2></td>
-        <td><h2>Hotel Image</h2></td>
-        <td><h2 style="text-align: center; font-weight: bold; ">Check-in Date</h2></td>
-        <td><h2>Total price</h2></td>
-        <td><h2>Cancel Booking</h2></td>
+        <td><h2><b>Hotel Image</b></h2></td>
+        <td><h2><b>Cancel Booking</b></h2></td>
     </tr>
 
     <!-- Getting the particular logged-in user booking details-->
@@ -31,8 +29,6 @@
         {% if booking.Hotel_image %}
         <td><img src="{{ booking.Hotel_image.url }}" height ="280px" width="500px" style ="margin-bottom: 50px;"></td>
         {% endif %}
-        <td style ="margin-left: 20px;">{{booking.name}}</td>
-        <td>{{booking.name}}</td>
         <td><a href="/cancel/{{booking.id}}/" class="btn btn-danger">Cancel My Booking</a></td>
     </tr>
     {% endfor %}

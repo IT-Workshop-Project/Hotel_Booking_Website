@@ -93,7 +93,7 @@ def price(request):
             x=amt
         if amt < x:
            x=amt
-        i=i+1 
+        i = i+1 
     
     # using a dictionary to store thr values
     context = {'hotels': HotelModel.objects.all(),'cheapest': HotelModel.objects.filter(totalprice = x)}

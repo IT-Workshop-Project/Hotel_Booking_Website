@@ -18,18 +18,18 @@
     <form method="POST" action="/add/" enctype ="multipart/form-data" style="width: 200px;">
         {% csrf_token %}
         <label>Hotel Name</label>
-        <input type="text" class="form-control" name="hotel"> <br>
+        <input type="text" class="form-control" name="hotel" required> <br>
         <label>Hotel Price</label>
-        <input type="text" class="form-control" name="price">
+        <input type="text" class="form-control" name="price" required>
         &nbsp; &nbsp;
         <label>Upload main Hotel Image</label>
-        <input type="file" name="imagename"> &emsp; &nbsp; &nbsp;  <!-- Uploading Images-->
+        <input type="file" name="imagename" required> &emsp; &nbsp; &nbsp;  <!-- Uploading Images-->
         <label>Upload Hotel Image 2</label>
-        <input type="file" name="image1"> &emsp; &nbsp; &nbsp;
+        <input type="file" name="image1" required> &emsp; &nbsp; &nbsp;
         <label>Upload Hotel Image 3</label>
-        <input type="file" name="image2"> &emsp; &nbsp; &nbsp;
+        <input type="file" name="image2" required> &emsp; &nbsp; &nbsp;
         <label>Upload Hotel Image 4</label>
-        <input type="file" name="image3"> &emsp; &nbsp; &nbsp;  
+        <input type="file" name="image3" required> &emsp; &nbsp; &nbsp;  
         <button type="submit">Add</button>
     </form>
 

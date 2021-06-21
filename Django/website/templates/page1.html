@@ -105,7 +105,7 @@
   </button>
 </div>
 	</div>
-    {% endfor %}
+   
 
 	<div class="div5" style="color:white">
 		<h3 style="text-align: center; color: white; padding-top: 4px;" >Amenities & Services</h3>
@@ -125,19 +125,19 @@
 		<h3 style="text-align: center; color: white ; padding-top: 4px;">Price</h3>
 		<p style="text-align: center; margin-top: 0px;" >starts at</p>
 		<hr style="color:#ddddff">
-		<h4 style="text-align: center; color: orange;">&#8377 1925</h4>
-		<p style="color: white; text-align: center;">+ &#8377 448 taxes & fees</p>
+		<h4 style="text-align: center; color: orange;">&#8377 {{hotel.totalprice}}</h4>
+		<p style="color: white; text-align: center;"></p>
 		<hr style="color:#ddddff">
-		<p style="text-align: center; padding-top: 15px">
-            {% for hotel in hotels %}
+		<p style=" padding-top: 15px">
+           
             <form method="POST" action="/book/{{hotel.id}}/">
-              {% endfor %}
+            
               {% csrf_token %}
-              <button class='book' type='submit'>Book Now</button>
+              <button class='book' type='submit' style="margin-left: 80px;">Book Now</button>
             </form>
 		
 	</div>
-
+  {% endfor %}
 <!--USER RATING-->
 <div class="div7"><span class="heading"><b style="margin-left: 5px;">User Rating</b></span>
 <span class="fa fa-star checked"></span>

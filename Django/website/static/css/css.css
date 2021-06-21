@@ -5,16 +5,6 @@ body {
 .checked {
   color: orange;
 }
-
-.a, .b, .c , .d{
-   margin-top: 200px;
-   margin-left: 50px;
-   margin-right: 100px;
-   height: 270px;
-   border-radius: 20px;
-   background-color: rgb(221, 226, 225);
-}
-
 .price {
     position: relative;
     top: 80px;
@@ -22,22 +12,6 @@ body {
     font-family:'Times New Roman', Times, serif;
     font-size:x-large;
 }
-
-#a{
-     left: 550px; 
-     position: absolute;
-     padding-right: 100px;
-     color: rgb(8, 8, 8);
-
-}
-.ab1, .ab2 , .ab3, .ab4{
-position: relative;
-top: 70px;
-left: 500px;
-margin-right: 900px;
-border-radius: 10px;
-}
-
 .accordion {
 background-color: #eee;
 background-size: contain;
@@ -56,14 +30,6 @@ transition: 0.4s;
 font-family: 'Times New Roman', Times, serif;
 border-radius: 10px;
 }
-
-.heading {
-font-size: 25px;
-margin-right: 25px;
-color: rgb(0, 0, 0);
-background-color: white;
-}
-
 .fa {
 font-size: 25px;
 }
@@ -180,17 +146,7 @@ border: none;
 width:120px;
 }
 
-.topnav .login-container button {
-float: right;
-padding: 6px 10px;
-margin-top: 8px;
-margin-right: 16px;
-background-color: #555;
-color: white;
-font-size: 17px;
-border: none;
-cursor: pointer;
-}
+
 
 .topnav .login-container button:hover {
 background-color: green;

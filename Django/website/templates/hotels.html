@@ -10,7 +10,6 @@ Hotels
 {% endblock %}
 
 {% block content %}
-   <!--style="background-color: aqua;" -->
     <div style = "height: 100px;"></div>
     <div class="topnav">
     
@@ -20,18 +19,21 @@ Hotels
     </div>
     <div style=" border:5px; height: 440px; background-color: rgb(181, 204, 201);"><br>
     <h2 style="text-align: center; color: blue;">Cheapest Hotel</h2>
+    <!--FOR ADDING FOR LOOP-->
     {% for cheap in cheapest %}
+     <!--FOR CREATING CONATINER FOR DIFFERENT ELEMENTS-->
     <div class='cont' style="background-color: rgb(210, 224, 222); border-radius: 20px; margin-left: 50px; margin-right: 100px; margin-bottom: 200px;">
+      <!--FOR SHOWING IMAGES-->
       <img src="{{ cheap.hotel_Main_Img.url }}" style ="position: relative; height: 300px;width: 500px;border-radius: 20px;">
       <span style="position: relative; top:-110px; left: 40px; font-size: 30px; "><a href='/hotels/{{cheap.id}}/' style="text-decoration: none;">{{cheap.name}}</a>
-
+          <!--FOR SHOWING STARS-->
          <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star checked"></span>
           <span class="fa fa-star"></span>
      <span class="price">PRICE: {{cheap.totalprice}}</span>
-            
+             <!--FOR SHOWING REVIEW BUTTON-->
             <button class="accordion" style="width: 120%;">Reviews</button>
            <div class="panel">
              <span class="heading">User Rating</span>
@@ -93,17 +95,19 @@ Hotels
     {% endfor %}
   <h2 style="text-align: center;">Hotels</h2>
     {% for hotel in hotels %}
+    <!--FOR CREATING CONATINER FOR DIFFERENT ELEMENTS-->
     <div class='cont' style="background-color: rgb(210, 224, 222); border-radius: 20px; margin-left: 50px; margin-right: 100px; margin-bottom: 200px;">
-        <img src="{{ hotel.hotel_Main_Img.url }}" style ="position: relative; height: 300px;width: 500px;border-radius: 20px;">
+      <!--FOR SHOWING IMAGES-->  
+      <img src="{{ hotel.hotel_Main_Img.url }}" style ="position: relative; height: 300px;width: 500px;border-radius: 20px;">
         <span style="position: relative; top:-110px; left: 40px; font-size: 30px; "><a href='/hotels/{{hotel.id}}/' style="text-decoration: none;">{{hotel.name}}</a>
-
+           <!--FOR SHOWING STARS-->
            <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star checked"></span>
             <span class="fa fa-star"></span>
        <span class="price">PRICE: {{hotel.totalprice}}</span>
-              
+              <!--FOR SHOWING REVIEW BUTTON-->
               <button class="accordion" style="width: 120%;">Reviews</button>
              <div class="panel">
                <span class="heading">User Rating</span>
@@ -157,19 +161,9 @@ Hotels
              </div>     
             </button>  
         </span>        
-        <!-- <div class="container" style=" color: white;">
-            <div class="row">
-                <section id="hours" class="col-sm-4">
-                </section>
-                <section id="hours" class="col-sm-4">
-                    <span>Contact Us </span><br>
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
-                    Mon-Sat: 9:00am - 10:00pm<br>
-                </section>
-            </div>
-        </div> -->
     </div>
     {% endfor %}
+    <!--FOR ADDING TOGGLE FEATURE IN REVIEW BUTTON-->
     <script>
         var acc = document.getElementsByClassName("accordion");
         var i;

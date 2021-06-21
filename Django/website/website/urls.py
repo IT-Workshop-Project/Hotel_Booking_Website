@@ -32,7 +32,6 @@ urlpatterns = [
     path('signupuser/',signupuser),
     path('authenticate/',userauthenticate),
     path('customerwelcome/',customerwelcome),
-    # path('userlogout/',redirecthomePage),
     path('logoutuser/',logoutuser),
     path('book/<int:hotelp>/',book),
     path('userbookings/',userbooking),

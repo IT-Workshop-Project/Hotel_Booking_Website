@@ -1,6 +1,5 @@
 from django.db import models
 
-from django import forms
 from django.db.models.base import Model
 from .models import *
 
@@ -16,6 +15,5 @@ class HotelModel(models.Model):
 
 class Book(models.Model):
     username = models.CharField(max_length=20)
-    bookedhotel = models.CharField(max_length=20)
     name = models.CharField(max_length=20)
     Hotel_image = models.ImageField(upload_to='images/')
