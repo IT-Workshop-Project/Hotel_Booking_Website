@@ -1,12 +1,14 @@
 *{margin: 0;padding: 0;box-sizing: border-box;}
 main{
-	width: 97%;margin:5px auto;
+	/*--------------- Adding grid to the html page--------------*/
+  width: 97%;margin:5px auto;
 	  border-radius: 10px;
 	display: grid;
 	grid-template-rows: 70px 185px 80px 300px 220px 300px;
 	grid-template-columns: 50% 30% 20%;
 	grid-gap:10px;
-}
+}/*-------------------------------------------------*/
+
 	.div1{background-color:#2f3599;
 		grid-column: 1/-1;border-radius: 10px; overflow: hidden;}
 ul {
@@ -48,18 +50,25 @@ li a:hover{
 
 	.div2{background-color:#2ed573;
 		grid-column: 1/-1;border-radius: 10px;overflow: hidden;}
+
+
 	.div3{background-color:#9999ff;
 		grid-column: 1/-1;border-radius: 10px; overflow: hidden;}
+
+
 	#div4{background-color:#5352ed;border-radius:10px; overflow: hidden;}
 	
 	
 	.div5{border-radius: 10px; background-color:#2f3542}
+
 	.div6{background-color:#2f3542;border-radius: 10px; color: white;}
+
 	.div7{background-color:#ffffff;
-		grid-column: 1/2;border-radius: 10px;   }
+    grid-column: 1/2;border-radius: 10px;   }
   .div8{background-color:#f4a460;
     grid-column: 1/-1;border-radius: 10px;overflow: hidden;color: white}
-  .div9{background-color:#2f3542;
+  
+    .div9{background-color:#2f3542;
     grid-column:2/4;border-radius: 10px;}
   
 
@@ -71,7 +80,7 @@ li a:hover{
   font-size: 20px;
   margin-right: 20px;
 }
-
+/* --------------------styling the star ratings---------------------*/
 .fa {
   font-size: 25px;
 }
