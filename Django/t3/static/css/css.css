@@ -14,15 +14,7 @@ body {
    border-radius: 20px;
    background-color: rgb(221, 226, 225);
 }
-/* .a{
-    background-image: url("../images/1-14085_beach-hotel-background-hd.jpg");
-} */
 
-.d{
-   background-image: url("../images/background13-1920x1280.jpg");
-   background-size: contain;
-   background-size: 450px;
-}
 .price {
     position: relative;
     top: 80px;

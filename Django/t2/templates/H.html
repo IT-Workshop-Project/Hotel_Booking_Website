@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+	<link rel ="stylesheet" type="text/css" href="{% static 'css/good.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+
+</head>
+<body style="background-color: #9999ff">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<main>
+
+<!-- DROPDOWN-->
+	<div class="div1">
+	<ul style="margin-top: 20px">
+	<li><h3 style="color: white;">HOTEL FINDER</h3></li>
+  	<li><a href="index.html">HOME</a></li>
+  	<li><a href="#news">NEWS</a></li>
+  
+	
+	<div class="login-container">
+        <form method ='POST' action='/authenticate/'>
+        <input type="text" placeholder="Email" name="email">
+        <input type="text" placeholder="Password" name="password">
+        <button type="submit">Login</button>
+      	</form>
+    	</div></ul>
+    </div>
+<!--------------------------------------->
+		
+		
+	<div class="div2"><div class="container">
+        <div style="margin-top: 50px;" class ="row">
+          <section id = "searching" class="col-sm-4">
+            <span style="color: black; font-size: 28px; font-family: cavolini;">SEARCH</span> <br>
+            <span style="color: black; font-size: 26px; font-family: vendome regular"> Your </span>
+            <span style="color: #f4a460; font-size: 26px; font-family: vendome regular"> Rooms </span>
+          </section>
+          <section style="color: black;" class="col-sm-4">
+            <form method="POST" action ="/price/">
+              {% csrf_token %}
+              &nbsp;<label>Check-in Date</label>
+              &nbsp;<input type="date" placeholder="Check-in Date" name ="check-in date" required> <br> <br>
+              <label>Check-out Date</label>
+              <input type="date" placeholder="Check-out Date" name ="check-out date" required>      
+          </section>
+          <section style="color: black;" class="col-sm-4">
+              &ensp;<label>Adult</label>
+              &emsp;<input type="number" placeholder="Adult" min = '1' name ="adult" required> <br> <br>
+              <label>Children</label>
+              <input type="number" placeholder="Children" min = '0' name ="Children">
+              <!-- initial value="0" -->
+              <input type="submit" value="Search">
+            </section>
+            </form>
+        
+        </div>
+    </div></div>
+<!----------------------------------------------------------------------->
+
+
+
+	<div class="div3" align="left"><p style="font-size: 1.85em"><b></style>The Leela Palace</b>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>   <font color="yellow" ><b>4.2/5</b></font></p><b style="margin: 3px;">Chankyapuri, New Delhi</b></div>
+<!------>
+
+
+
+<!-- SLIDER IMGAGES-->
+	<div id="div4" >
+		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner" >
+    <div class="carousel-item active">
+      <img src="{% static 'images/H1.jpeg' %}" class="d-block w-100" alt="..." height="300px"  >
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/H2.jpeg' %}" class="d-block w-100" alt="..." height="300px">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/H3.jpeg' %}" class="d-block w-100" alt="..." height="300px">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/H4.jpeg' %}" class="d-block w-100" alt="..." height="300px">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+	</div>
+	<!-------->
+
+
+
+	<div class="div5" style="color:white">
+		<h3 style="text-align: center; color: white; padding-top: 4px;" >Amenities & Services</h3>
+		<hr style="color:#ddddff">
+		
+            <p style="text-align: center;margin-bottom: 2px;margin-top: 2px; background-color:#2f3542 ">Doctor On Call<br>
+			Sanitizers installed<br>
+			Clean Rooms<br>
+			Free Wifi<br>
+			24x7 Security<br>
+			Parking Facilities</p>
+			<hr style="color:#ddddff">
+			<div style="text-align: center; "><h6>Check-In : 3:00 PM</h6><h6>Check-Out : 12:00 PM</h6></div>
+	</div>
+
+
+	<div class="div6">
+		<h3 style="text-align: center; color: white ; padding-top: 4px;">Price</h3>
+		<p style="text-align: center; margin-top: 0px;" >starts at</p>
+		<hr style="color:#ddddff">
+		<h4 style="text-align: center; color: orange;">&#8377 11250</h4>
+		<p style="color: white; text-align: center;">+ &#8377 2025 taxes & fees</p>
+		<hr style="color:#ddddff">
+		<p style="text-align: center; padding-top: 15px"><button class="book">Book Now</button></p>
+
+
+		
+	</div>
+
+
+
+
+<!--USER RATING-->
+<div class="div7"><span class="heading"><b style="margin-left: 5px;">User Rating</b></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<p>4.2 average based on 503 ratings</p>
+<hr style="border:3px solid #f1f1f1">
+
+<div class="row" style="text-align: center;">
+  <div class="side">
+    <div>5 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-5"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>290</div>
+  </div>
+  <div class="side">
+    <div>4 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-4"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>115</div>
+  </div>
+  <div class="side">
+    <div>3 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-3"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>42</div>
+  </div>
+  <div class="side">
+    <div>2 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-2"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>23</div>
+  </div>
+  <div class="side">
+    <div>1 star</div>
+  </div>
+  <div class="middle">
+    <div class="bar-container">
+      <div class="bar-1"></div>
+    </div>
+  </div>
+  <div class="side right">
+    <div>33</div>
+  </div>
+</div>
+</div>
+<!------>
+
+
+
+<div class="div9"><h4 style="text-align: center;color: white ; margin-top: 4px;">Hotel Rules</h4>
+	<hr style="color:#ddddff">
+	<p style="color: white;margin-left:10px;">
+		Quarantine protocols are being followed as per local government authorities<br>
+       Guests from containment zones are not allowed<br>
+       Property staff is trained on hygiene guidelines<br>
+       Guests with fever are not allowed<br>
+       Guests without Aarogya Set app are allowed<br>
+       Hand sanitizer is provided in guest accommodation and common areas<br></p>
+</div>
+
+<!-------->
+	<div class="div8"><footer class="panel-footer">
+      <div class="container">
+        <div class="row">
+          <section id="hours" class="col-sm-4">
+            <span>Contact Us </span><br>
+            Mon-Sat: 9:00am - 10:00pm<br>
+            <img class="img" src="images\pic2.png" alt="Hotel" />
+            Sunday Off <br>
+            Email: info@project.com <br>
+            Phone: 0987654321
+            <hr class="visible-xs">
+          </section>
+          <section id="address" class="col-sm-4">
+            <span>Booking</span><br>
+            Hotels<br>
+            <hr class="visible-xs">
+          </section>
+          <section id="testimonials" class="col-sm-4">
+            <p style="font-size: 20px;">Newsletter</p>
+              <form>
+                <input type="text" placeholder="Email" name="email">
+                <input type="submit" name="password "> <!-- Diff bw this type=submit and button -->
+              </form>
+            <p onclick="alert('Thank You for subscribing to our Newsletter');">
+              Subscribe  <!-- Make it a button -->
+            </p>
+          </section>
+        </div>
+      </div>
+    </footer>
+   
+
+    
+
+</main>
+<script src="{% static 'js/jquery-2.1.4.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
