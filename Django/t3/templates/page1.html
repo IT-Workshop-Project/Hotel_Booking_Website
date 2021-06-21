@@ -17,23 +17,23 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <main>
 
-<!-- DROPDOWN-->
+<!--------------------------- Header------------------------------>
 	<div class="div1">
 	<ul style="margin-top: 20px">
 	<li><h3 style="color: white;">HOTEL FINDER</h3></li>
   	<li><a href="/">HOME</a></li>
   
-
+ <!-- -----code for login credentials--------------->
 	<div class="login-container">
         <form method ='POST' action='/authenticate/'>
-        <input type="text" placeholder="Email" name="email">
-        <input type="text" placeholder="Password" name="password">
+        <input type="text" placeholder="Email" name="email"><!--accept the email adress-->
+        <input type="text" placeholder="Password" name="password"><!--accept the password-->
         <button type="submit">Login</button>
       	</form>
     	</div></ul>
     </div>
 <!--------------------------------------->
-		
+<!----code for Search box------------------->		
 	<div class="div2"><div class="container">
         <div style="margin-top: 50px;" class ="row">
           <section id = "searching" class="col-sm-4">
@@ -50,29 +50,32 @@
               <input type="date" placeholder="Check-out Date" name ="check-out date" required>      
           </section>
           <section style="color: black;" class="col-sm-4">
+            <!--code for collecting no of adults-->
               &ensp;<label>Adult</label>
               &emsp;<input type="number" placeholder="Adult" min = '1' name ="adult" required> <br> <br>
+               <!--code for collecting no of children-->
               <label>Children</label>
               <input type="number" placeholder="Children" min = '0' name ="Children">
               <!-- initial value="0" -->
               <input type="submit" value="Search">
-            </section>
+            </section
             </form>
         
         </div>
     </div></div>
 <!----------------------------------------------------------------------->
 {% for hotel in hotels %}
-
+<!-------------------Code for Hotel name and Star ratings----------------------------------------->
 <div class="div3" style="text-align: left;"><p style="font-size: 1.85em"><b></style>{{hotel.name}}</b>
+<span class="fa fa-star checked"></span><!-----Star Checked----->
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>   <font color="yellow" ><b>4.1/5</b></font></p><b style="margin: 3px;">Rohini, New Delhi</b></div>
-<!------>
+<span class="fa fa-star"></span>  <!-------Star unchecked-------------->
+ <font color="yellow" ><b>4.1/5</b></font></p><b style="margin: 3px;">Rohini, New Delhi</b></div>
+<!--------------------------------------------------------------------------------------------------------->
 
-<!-- SLIDER IMGAGES-->
+<!------------------------- Code For Sliding Images-------------------------->
 	<div id="div4" >
 		<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" >
   <div class="carousel-indicators">
@@ -81,6 +84,7 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
   </div>
+  <!----------------code for adding images in the slide------------------------->
   <div class="carousel-inner" >
     <div class="carousel-item active">
       <img src="{{ hotel.hotel_Main_Img.url }}" class="d-block w-100" alt="..." height="300px"  >
@@ -95,6 +99,8 @@
       <img src="{{ hotel.hotel_Main_Img3.url }}" class="d-block w-100" alt="..." height="300px">
     </div>
   </div>
+
+  <!-----------code for images navigation button--------->
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -106,6 +112,7 @@
 </div>
 	</div>
     {% endfor %}
+  <!--------------code for information section---------------------->
 
 	<div class="div5" style="color:white">
 		<h3 style="text-align: center; color: white; padding-top: 4px;" >Amenities & Services</h3>
@@ -120,7 +127,8 @@
 			<hr style="color:#ddddff">
 			<div style="text-align: center; "><h6>Check-In : 3:00 PM</h6><h6>Check-Out : 12:00 PM</h6></div>
 	</div>
-
+<!------------------------------------------------------------------------------------->
+<!------------------------------------code for pricing section-------------------------->
 	<div class="div6">
 		<h3 style="text-align: center; color: white ; padding-top: 4px;">Price</h3>
 		<p style="text-align: center; margin-top: 0px;" >starts at</p>
@@ -129,7 +137,7 @@
 		<p style="color: white; text-align: center;">+ &#8377 448 taxes & fees</p>
 		<hr style="color:#ddddff">
 		<p style="text-align: center; padding-top: 15px">
-            {% for hotel in hotels %}
+            {% for hotel in hotels %}<!-------------code for booking --------------->
             <form method="POST" action="/book/{{hotel.id}}/">
               {% endfor %}
               {% csrf_token %}
@@ -137,14 +145,14 @@
             </form>
 		
 	</div>
-
-<!--USER RATING-->
+<!------------------------------------------------------------------------------->
+<!--------------------------------USER RATING and reviews------------------------>
 <div class="div7"><span class="heading"><b style="margin-left: 5px;">User Rating</b></span>
+<span class="fa fa-star checked"></span><!-----Star Checked----->
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
 <span class="fa fa-star checked"></span>
-<span class="fa fa-star checked"></span>
-<span class="fa fa-star"></span>
+<span class="fa fa-star"></span><!-----Star unchecked----->
 <p>4.1 average based on 254 reviews.</p>
 <hr style="border:3px solid #f1f1f1">
 
@@ -206,8 +214,8 @@
   </div>
 </div>
 </div>
-<!------>
-
+<!---------------------------------------------------------------------------------------------->
+<!-------------------------------code for hotel rules----------------------------------------------->
 <div class="div9"><h4 style="text-align: center;color: white ; margin-top: 4px;">Hotel Rules</h4>
 	<hr style="color:#ddddff">
 	<p style="color: white;margin-left:10px;">
@@ -218,6 +226,6 @@
        Guests without Aarogya Set app are allowed<br>
        Hand sanitizer is provided in guest accommodation and common areas<br></p>
 </div>
-
+<!----------------------------------------------------------------------------------------------------------->
 </main>
 {% endblock %}
