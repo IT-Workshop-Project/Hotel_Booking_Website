@@ -1,0 +1,416 @@
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #fff; 
+  font-family: 'Oxygen', sans-serif;
+}
+
+.center {
+  position: absolute;
+  top: 20%;
+  left: 29%;
+  font-family: Times New Roman; 
+  color: white; 
+  font-size: 60px;
+  animation-name: welcome;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  visibility:hidden;
+  animation-delay:0.6s;
+  animation: fadeIn4 2s;
+}
+
+@keyframes fadeIn4 {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  from {top: 10%;}
+  to {top: 20%;}
+}
+
+.center1 {
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  color: white; 
+  animation-name: exam;
+  animation-duration: 2s;
+  font-size: 20px;
+  visibility:hidden;
+  animation-delay:0.8s;
+}
+
+@keyframes exam {
+  from {top: 50%;}
+  to {top: 35%;}
+}
+
+.anim{
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation: fadeIn0 3s;
+  /* visibility:hidden; */
+  /* animation-delay:0.6s; */
+  position: absolute; 
+  font-family: Times New Roman; 
+  left: 130px; 
+  font-size: 50px; 
+  top: 70px;
+}
+
+@keyframes fadeIn0 {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  from {left: 80px;}
+  to {left: 130px;}
+}
+
+.anim1{
+  animation-name: a;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  /* visibility:hidden; */
+  /* animation-delay:0.6s; */
+  /* position: absolute;  */
+  /* font-family: Times New Roman;  */
+}
+
+@keyframes a {
+  from {right: 80px;}
+  to {right: 130px;}
+}
+
+.anim2{
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation: fadeIn1 3s;
+}
+
+@keyframes fadeIn1 {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  from {margin-right: 150px;}
+  to {margin-right: 200px;}
+}
+
+@-webkit-keyframes fadeIn1 {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.anim3{
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation: fadeIn2 3s;
+}
+
+@keyframes fadeIn2 {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  from {right: 30px;}
+  to {right: 80px;}
+}
+
+.anim4{
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation: fadeIn3 3s;
+}
+
+@keyframes fadeIn3 {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  from {right: 220px;}
+  to {right: 270px;}
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Navbar container */
+.navbar {
+  position: absolute;
+  overflow: hidden;
+  background-color: rgba(5,5,5,0);
+  font-family: Arial;
+  margin-top: 10px;
+  right: 20px;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center; /* change to left*/
+  padding: 14px 16px;
+  text-decoration: none;
+  /*left: 200px;*/
+
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #eb4c34;
+}
+
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;  /* change to 0 and see the change*/
+  background-color: #202040;
+  border-top: 0;
+}
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+#hours, #address {
+  line-height: 2;
+}
+#hours > span, #address > span {
+  font-size: 1.3em;
+}
+#address p {
+  color: #557c3e;
+  font-size: .8em;
+  line-height: 1.8;
+}
+#testimonials {
+  font-style: italic;
+}
+
+.bottom {
+  background-color: #1a1a38;
+  /*margin-bottom: 100px;*/
+  height:  100px;
+}
+
+.copyright{  /* not .bottom div.copyright?*/
+  /*position: relative;   , how to place a text on the bottom*/  
+  margin-top:40px ;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.Search{ /* search doesnt work*/
+  background-color: #e6e6e6;
+  height: 150px;
+}
+
+.Facilities{
+  font-size: 20px;
+  color: black;
+}
+
+#facilities {
+  font-size: 18px; 
+  color: rgb(0, 0, 0,0.7);
+}
+
+.topbar{
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.login-container{
+  text-align: right;
+  margin-right: 50px;
+}
+
+.header {
+  position: fixed;
+  top: 50px; /*or 0*/
+  z-index: 1;
+  width: 100%;
+  background-color: #f1f1f1;
+}
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #f4a460;
+}
+.progress-bar {
+  height: 8px;
+  background: #f05832;
+  width: 0%;
+}
+
+  /*add full-width input fields*/
+  input[type=text],
+  input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+
+  /* set a style for all buttons*/
+  button {
+    background-color: green;
+    color: white;
+    padding: 4px 10px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  /*set styles for the cancel button*/
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #FF2E00;
+  }
+
+  /*float cancel and signup buttons and add an equal width*/
+  .cancelbtn{
+    margin-left: 40px;
+    float: left;
+    width: 45%;
+    margin-right: 20px;
+  }
+
+  .signupbtn {
+    padding: 14px 20px;
+    background-color: #f18d35;
+    float: left;
+    width: 45%
+  }
+
+  /*add padding to container elements*/
+  .container {
+    padding: 16px;
+  }
+  /*define the modal’s background*/
+  
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+  }
+  /*define the modal-content background*/
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+  }
+  /*define the close button*/
+  
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 50px;
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  /*define the close hover and focus effects*/
+
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  @media screen and (max-width: 300px) {
+    .cancelbtn,
+    .signupbtn {
+      width: 100%;
+    }
+  }
+
+button{
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: #f4a460;
+  color: white;
+}
+
+.search_btn{
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f4a460;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 79px;
+  padding: 6px 14px;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.search_btn:hover{
+  background-color: #f4a460;
+  color: white;
+}
+
+.subs-btn{
+  background-color: white;
+  color: black;
+  border-color: #1a1a38;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 110px;
+  padding: 6px 14px;
+}
+
+.subs-btn:hover{
+  background-color: rgb(111, 101, 240);
+  color: white;
+  cursor: pointer;
+}
+
+.booking, .logout{
+  background-color: white; 
+  color: black; 
+  border: 2px solid #f4a460;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  width: 120px;
+  padding: 6px 14px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+
+}
+/* 
+.booking:hover{
+  background-color: green; 
+  color: white; 
+  border: 2px solid green;
+} */
+
+.logout{
+  width: 100px;
+}
