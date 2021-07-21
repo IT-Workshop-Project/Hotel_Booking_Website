@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['test2-aditya.herokuapp.com']
+ALLOWED_HOSTS = ['https://test2-aditya.herokuapp.com/']
 
 
 # Application definition
